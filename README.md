@@ -1,8 +1,9 @@
-# Internet Programming: Design Project Assignment
+<center><h1>Internet Programming: Design Project Assignment</h1></center>
+<br>
+<p align="center"><img src="public/assets/logo-rounded.png" height='128px'></p>
+<br>
 
-<p align="center"><img src="public/assets/logo-rounded.png"></p>
-
-`PROJECT NAME:` **u-WORKY** *job platform*
+`PROJECT NAME:` &nbsp; **u-WORKY** *job platform*
 
 `TEAM MEMBERS:`
 <pre>
@@ -13,3 +14,7 @@
 5) Islamov Davronbek:       U1710261
 6) Tuyeva Mekhribon:        U1710029
 </pre>
+
+`LINK TO HOST:` 
+
+`LINK TO REPORT:`
