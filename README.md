@@ -1,6 +1,15 @@
 # Internet Programming: Design Project Assignment
 
-Find `ip_design_project.pdf` file in this folder, and refer to all the instructions given there. 
+<p align="center"><img src="public/assets/logo-rounded.png"></p>
 
-You have to submit your project into this repository before 05.05.2019 (midnight).
+`PROJECT NAME:` **u-WORKY** *job platform*
 
+`TEAM MEMBERS:`
+<pre>
+1) Soliev Komroniddin:      U1710036
+2) Ganieva Dildora:         U1710272
+3) Lim Olga:                U1710297
+4) Vakhobov Azamat:         U1710266
+5) Islamov Davronbek:       U1710261
+6) Tuyeva Mekhribon:        U1710029
+</pre>
