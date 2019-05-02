@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>u-WORKY</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl navbar-dark scrolling-navbar fixed-top">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="u-WORKY" />
+        </a>
+  
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto d-flex">
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+  
+            <!-- Dropdown -->
+            <li class="nav-item dropdown my-auto">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Jobs</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item text-center" href="#">Job Categories</a>
+                <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                <a class="dropdown-item text-center" href="#">Find on Map</a>
+              </div>
+            </li>
+            <!-- /Dropdown -->
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="candidate-listing.html">Candidates</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Employers</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li>
+              <form class="form-inline">
+                <div class="md-form container-fluid my-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block btn-rounded"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- /Links -->
+        </div>
+        <!-- /Collapsible content -->
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Poster -->
+      <div class="poster" style="background-image: url('img/bg-dark-radial.jpg');">
+        <div class="container">
+
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="text-center">
+                    <h1><strong>Find your   <span>dream job!</span></strong></h1>
+                    <h5><strong>Perfect employment &amp; career opportunities</strong></h5>
+                  </div>
+              </div>
+          </div>
+
+          <form action="">
+            <div class="row search-fields">
+              <div class="search-field col-xl col-lg col-md-12">
+                <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here...">
+                  <option value="" disabled selected>Enter job title...</option>
+                  <option value="1">PHP</option>
+                  <option value="2">Android</option>
+                  <option value="3">IOS</option>
+                  <option value="4">JavaScript</option>
+                </select>
+                <label>Keywords?</label>
+              </div>
+
+              <div class="search-field col-xl col-lg col-md-12">
+                <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here...">
+                  <option value="" disabled selected>Enter location...</option>
+                  <option value="1">Uzbekistan</option>
+                  <option value="2">USA</option>
+                  <option value="3">Korea</option>
+                  <option value="4">Japan</option>
+                </select>
+                <label>Where?</label>
+              </div>
+
+              <div class="search-field col-xl col-lg col-md-12">
+                <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here...">
+                  <option value="" disabled selected>Enter category...</option>
+                  <option value="1">IT &amp; Computer</option>
+                  <option value="2">Finance &amp; Logistics</option>
+                  <option value="3">Arts, Media, Design</option>
+                  <option value="4">Education</option>
+                  <option value="5">Engineering</option>
+                </select>
+                <label>Category?</label>
+              </div>
+
+              <div class="search-field-btn col-xl-1 col-lg-1 col-md-12">
+                <button type="button" class="btn btn-primary btn-block btn-rounded">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row trending-keywords">
+                <div class="col-12">
+                  <span class="trending-keywords-title">Trending Keywords:</span>
+                  <br>
+                  <a href="#">PHP</a>
+                  <a href="#">IOS</a>
+                  <a href="#">Android</a>
+                  <a href="#">JavaScript</a>
+                  <a href="#">Design</a>
+                </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+      <!-- /Poster -->
+    </header>
+
+
+    <main>
+      <section class="categories-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="categories-header section-title">
+                <div>
+                  <h2>
+                    BROWSE FEATURED CATEGORIES!
+                  </h2>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row categories">
+            <div class="col-xl col-lg-6 col-md-6 col-12">
+              <div class="item-category">
+                <!-- Card -->
+                <div class="card">
+                  <div class="text-white text-center card-content">
+                    <h1><i class="icon-job-it-developers"></i></h1>
+                    <h6 class="card-title">
+                      <strong><a href="#">IT &amp; Computer</a></strong>
+                    </h6>
+                    <p>( 10 jobs )</p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+            <div class="col-xl col-lg-6 col-md-6 col-12">
+              <div class="item-category">
+                <!-- Card -->
+                <div class="card">
+                  <div class="text-white text-center card-content">
+                    <h1><i class="icon-job-business-financial"></i></h1>
+                    <h6 class="card-title">
+                      <strong><a href="#">Finance</a></strong>
+                    </h6>
+                    <p>( 8 jobs )</p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+            <div class="col-xl col-lg-6 col-md-6 col-12">
+              <div class="item-category">
+                <!-- Card -->
+                <div class="card">
+                  <div class="text-white text-center card-content">
+                    <h1><i class="icon-job-design-media"></i></h1>
+                    <h6 class="card-title">
+                      <strong><a href="#">Arts, Media, Design</a></strong>
+                    </h6>
+                    <p>( 2 jobs )</p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+            <div class="col-xl col-lg-6 col-md-6 col-12">
+              <div class="item-category">
+                <!-- Card -->
+                <div class="card">
+                  <div class="text-white text-center card-content">
+                    <h1><i class="icon-job-education"></i></h1>
+                    <h6 class="card-title">
+                      <strong><a href="#">Education</a></strong>
+                    </h6>
+                    <p>( 4 jobs )</p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+            <div class="col-xl col-lg-12 col-md-12 col-12">
+              <div class="item-category">
+                <!-- Card -->
+                <div class="card">
+                  <div class="text-white text-center card-content-all gradient-blue">
+                    <div class="dashed-bordered">
+                      <h6 class="card-title">
+                        <strong><a href="#">All Categories</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jobs-wrapper">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-md-8 tabs-container">
+              <ul class="nav md-tabs nav-justified gradient-blue" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#recent-jobs-panel" role="tab"> Recent Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#featured-jobs-panel" role="tab">Featured Jobs</a>
+                </li>
+                </ul>
+            </div>
+
+            <div class="col-md-12">
+
+              <div class="tab-content px-0 mt-4">
+                <!-- Panel Recent Jobs -->
+                <div class="tab-pane fade in show active" id="recent-jobs-panel" role="tabpanel">
+                  <div class="row">
+                    <div class="col-12">
+
+                      <div class="row">
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+                      </div>
+
+                      <div class="row">
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /Panel Recent Jobs -->
+
+
+                <!-- Panel Featured Jobs -->
+                <div class="tab-pane fade" id="featured-jobs-panel" role="tabpanel">
+                  <div class="row">
+                    <div class="col-12">
+
+                      <div class="row">
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+
+                              <!-- Featured -->
+                              <div><img src="img/job-featured.png" alt="" class="featured-icon"></div>
+                              <!-- /Featured -->
+
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-turon.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000 - $2,300<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+
+                              <!-- Featured -->
+                              <div><img src="img/job-featured.png" alt="" class="featured-icon"></div>
+                              <!-- /Featured -->
+
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-turon.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000 - $2,300<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+                      </div>
+
+                      <div class="row">
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+
+                              <!-- Featured -->
+                              <div><img src="img/job-featured.png" alt="" class="featured-icon"></div>
+                              <!-- /Featured -->
+
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-turon.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000 - $2,300<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+
+                        <!-- Card -->
+                        <div class="col-lg-6 col-md-6 job">
+                          <div class="card">
+                            <div class="row">
+
+                              <!-- Featured -->
+                              <div><img src="img/job-featured.png" alt="" class="featured-icon"></div>
+                              <!-- /Featured -->
+
+                              <!-- Card image -->
+                              <div class="col-4 card-image-wrapper">
+                                <div class="card-image">
+                                  <img src="img/employer-logo-turon.png" class="img-fluid" alt="">
+                                </div>
+                              </div>
+                              <!--Card image -->
+
+                              <div class="col-8">
+                                <!-- Card content -->
+                                <div class="card-body">
+                                  <!-- Category & Title -->
+                                  <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
+                                  <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                  <!-- /Category & Title -->
+
+                                  <p>
+                                    <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon Telecom<br>
+                                    <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik str. 5/1<br>
+                                    <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000 - $2,300<br>
+                                  </p>
+                                </div>
+                                <!-- /Card content -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Card -->
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- /Panel Featured Jobs -->
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+    </main>
+
+
+
+    <!--Footer-->
+    <footer>
+
+      <div class="container">
+
+        <div class="row">
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-col">
+              <h5 class="title">ABOUT u-WORKY</h5>
+              <div>
+                <img src="img/logo.png" alt="u-WORKY" />
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quibusdam assumenda sequi ducimus temporibus dolore, libero inventore dolorum error illo.
+              </p>
+              <p>
+                <i class="fab fa-github pr-3 mb-2 blue-text"></i>
+                <a href="https://github.com/iuthub/design-project-u-worky" target="_blank" rel="noopener noreferrer">LINK TO GITHUB</a>
+              </p>
+            </div>
+          </div>  
+          <!--/About -->
+
+          <!-- Done by -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>Project by</h5>
+              <p>Soliev Komroniddin</p>
+              <p>Ganieva Dildora</p>
+              <p>Lim Olga</p>
+              <p>Vakhobov Azamat</p>
+              <p>Islamov Davronbek</p>
+              <p>Tuyeva Mekhribon</p>
+            </div>
+          </div>
+          <!-- /Done by -->
+
+          <!-- ID -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>ID</h5>
+              <p>U1710036</p>
+              <p>U1710272</p>
+              <p>U1710297</p>
+              <p>U1710266</p>
+              <p>U1710261 </p>
+              <p>U1710029</p>
+            </div>
+          </div>
+          <!-- /ID -->
+        </div>
+
+      </div>
+
+      <!--Copyright-->
+      <div class="copyright">
+        <div class="container-fluid">
+          <p>
+              © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
+          </p>
+        </div>
+      </div>
+      <!--/Copyright-->
+
+    </footer>
+    <!--/Footer-->
+
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<center><h1>Internet Programming: Design Project Assignment</h1></center>
+<h1 align="center">Internet Programming: Design Project Assignment</h1>
 <br>
 <p align="center"><img src="public/assets/logo-rounded.png" height='128px'></p>
 <br>
@@ -15,6 +15,6 @@
 6) Tuyeva Mekhribon:        U1710029
 </pre>
 
-`LINK TO HOST:` 
+`LINK TO HOST:`
 
 `LINK TO REPORT:`
