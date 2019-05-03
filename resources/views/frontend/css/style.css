@@ -88,9 +88,16 @@ footer.page-footer {
 
 
 /* Poster */
-.poster {
-  height: 100vh;
+.poster-index {
   background-image: url("../img/bg-dark-radial.jpg");
+}
+.poster-full {
+  height: 100vh;
+}
+.poster-md {
+  height: 60vh;
+}
+.poster {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -490,17 +497,14 @@ footer.page-footer {
 
 
 
-
-
-
 /* Footer */
 footer {
   margin-top: 32px;
-  padding-top: 32px;
   background-color: #34495e;
   text-align: center;
 }
 footer .container .row {
+  padding-top: 32px;
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
@@ -532,3 +536,139 @@ footer img {
   margin-bottom: 16px;
 }
 /* /Footer */
+
+
+
+/* Switch */
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #b4ffff !important;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #4285f4 !important;
+}
+/* /Switch */
+
+
+
+
+
+
+
+
+
+
+
+
+.poster-signin {
+  background-image: url(../img/signin-bg-dark.jpg);
+}
+.poster-signin .container .row {
+  display: flex;
+  justify-content: center;
+}
+.poster-signin .card-signin .card-header {
+  color: white;
+  padding : 32px 0;
+  text-align: center;
+  background-color: #4285f4;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+}
+.poster-signin .card-signin form {
+  text-align: center;
+  color: #757575;
+}
+.poster-signin .card-signin form button {
+  margin: 32px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dashboard */
+.dashboard .side-nav .logo-sn img {
+  height: 50px;
+}
+.dashboard .side-nav {
+  background-image: url('../img/dashboard-bg.jpg');
+}  
+.dashboard .user-profile {
+  width: 240px;
+  padding: 20px 20px 20px 32px;
+  display: flex;
+}
+.dashboard .user-profile img {
+    max-width: 100%;
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    margin: auto;
+    float: left;
+    background: white;
+    border-radius: 10rem;
+}
+.dashboard .user-profile h4 {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding-left: 20px;
+  margin: 20px 0;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboard .side-nav .dashboard-menu li {
+  font-weight: normal;
+}
+.dashboard .side-nav .dashboard-menu a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.dashboard .side-nav .dashboard-menu a span {
+  font-size: 14px;
+}
+.dashboard .side-nav .dashboard-menu a:hover {
+  color: #8ef4ff;
+}
+.dashboard .form-item {
+  margin: 24px 0;
+}
+/* /Dashboard */
+
+
+
+
