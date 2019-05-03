@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Sign Up - u-WORKY</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body>
+    <header>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl navbar-dark top-nav-collapse fixed-top">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="u-WORKY" />
+        </a>
+  
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto d-flex">
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+  
+            <!-- Dropdown -->
+            <li class="nav-item dropdown my-auto">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Jobs</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item text-center" href="#">Job Categories</a>
+                <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                <a class="dropdown-item text-center" href="#">Find on Map</a>
+              </div>
+            </li>
+            <!-- /Dropdown -->
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="candidate-listing.html">Candidates</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Employers</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li>
+              <form class="form-inline">
+                <div class="md-form container-fluid my-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block btn-rounded"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- /Links -->
+        </div>
+        <!-- /Collapsible content -->
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Poster -->
+      <div class="poster poster-full poster-signup">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12">
+
+
+              <div class="card card-signup">
+
+                <h4 class="card-header">
+                  <strong>Sign in</strong>
+                </h4>
+              
+                <!--Card content-->
+                <div class="card-body px-lg-5 pt-0">
+              
+                  <!-- Form -->
+                  <form>
+                    <!-- Name -->
+                    <div class="md-form">
+                      <input type="text" id="name" name="name" class="form-control">
+                      <label for="name">Username</label>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="md-form">
+                      <input type="email" id="email" name="email" class="form-control">
+                      <label for="email">Email</label>
+                    </div>
+              
+                    <!-- Password -->
+                    <div class="md-form">
+                      <input type="password" id="password" name="password" class="form-control">
+                      <label for="password">Create Password</label>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="md-form">
+                      <input type="password" id="confirm-password" name="confirm-password" class="form-control">
+                      <label for="confirm-password">Confirm password</label>
+                    </div>
+
+                    <div class="switch">
+                      <label>
+                        Candidate
+                        <input type="checkbox">
+                        <span class="lever"></span> Employer
+                      </label>
+                    </div>
+                      
+                    <!-- Sign up button -->
+                    <button class="btn btn-outline-primary btn-rounded btn-block" type="submit">Sign up</button>
+              
+                    <!-- Register -->
+                    <p>Already a member?
+                      <a href="signin.html">Sign in</a>
+                    </p>
+              
+                  </form>
+                  <!-- Form -->
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Poster -->
+    </header>
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+      // Tooltips Initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  </body>
+</html>
