@@ -551,37 +551,39 @@ footer img {
 
 
 
-
-
-
-
-
-
-
-
+/* Sign In & Sign Up */
 .poster-signin {
   background-image: url(../img/signin-bg-dark.jpg);
 }
-.poster-signin .container .row {
+.poster-signup {
+  background-image: url(../img/signup-bg-dark.jpg);
+}
+.poster-signin .container .row,
+.poster-signup .container .row {
   display: flex;
   justify-content: center;
 }
-.poster-signin .card-signin .card-header {
+.poster-signin .card-signin .card-header,
+.poster-signup .card-signup .card-header {
   color: white;
-  padding : 32px 0;
+  padding : 24px 0;
   text-align: center;
   background-color: #4285f4;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 
 }
-.poster-signin .card-signin form {
+.poster-signin .card-signin form,
+.poster-signup .card-signup form {
   text-align: center;
   color: #757575;
 }
-.poster-signin .card-signin form button {
-  margin: 32px 0;
+.poster-signin .card-signin form button,
+.poster-signup .card-signup form button {
+  margin: 24px 0;
 }
+/* /Sign In & Sign Up */
+
 
 
 
