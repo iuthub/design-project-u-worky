@@ -95,7 +95,7 @@ footer.page-footer {
   height: 100vh;
 }
 .poster-md {
-  height: 60vh;
+  min-height: 60vh;
 }
 .poster {
   background-repeat: no-repeat;
@@ -136,13 +136,22 @@ footer.page-footer {
   color: white;
   text-transform: capitalize;
 }
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
 /* /Poster */
 
 
 
 /* Search Fields */
 .search-fields {
+  width: 100%;
   margin-top: 16px;
+  justify-content: center;
 }
 .search-field {
   margin: 16px;
@@ -310,7 +319,7 @@ footer.page-footer {
 /* /Cards of Categories */
 
 
-/* Jobs */
+/* Jobs & Candidates */
 .jobs-wrapper {
   background-color: white;
   padding: 16px 0;
@@ -331,22 +340,26 @@ footer.page-footer {
   height: 42px;
   left: -1px;
 }
-.job {
+.job, .candidate {
   margin-bottom: 32px;
 }
-.job .card{
+.job .card,
+.candidate .card {
   transition: all 0.5s cubic-bezier(0.15, 0.8, 0.15, 1);
 }
-.job .card:hover{
+.job .card:hover, 
+.candidate .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(1.01);
 }
-.job .card .card-image-wrapper {
+.job .card .card-image-wrapper, 
+.candidate .card .card-image-wrapper {
   display: flex;
   justify-content: center;
   margin: auto;
 }
-.job .card .card-image-wrapper .card-image {
+.job .card .card-image-wrapper .card-image,
+.candidate .card .card-image-wrapper .card-image {
   margin-left: 16px;
 } 
 .job .card-body p {
@@ -359,8 +372,26 @@ footer.page-footer {
 .badge a:hover {
   color: white;
 }
-
-/* /Jobs */
+.candidate .card .card-image img {
+  border-radius: 10rem;
+}
+.candidate .card .card-subtitle {
+  margin-bottom: 8px;
+}
+@media (max-width: 576px) {
+  .candidate .card .card-image img {
+    width: 86px;
+    margin-top: 16px;
+  }
+  .candidate .card .card-title,
+  .candidate .card .card-subtitle {
+    text-align: center;
+  }
+}
+.candidate .skill {
+  color: #757575;
+}
+/* /Jobs & Candidates */
 
 
 
@@ -586,6 +617,70 @@ footer img {
 
 
 
+
+
+
+.poster-jobs-listing {
+  background-image: url("../img/jobs-listing-bg-dark.jpg");
+}
+
+.poster-candidate-listing {
+  background-image: url("../img/candidate-suggestion-bg-dark.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.advanced-search.card {
+  margin: 48px 0;
+}
+.advanced-search-title {
+  padding: 24px 0 24px 48px;
+  text-transform: uppercase;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.advanced-search-title i {
+  position: relative;
+  top: 4px;
+  left: 8px;
+}
+.advanced-search.card #extSearch {
+  padding-bottom: 24px;
+  border-radius: 1rem;
+}
+.advanced-search.card #extSearch .row-sub-menu {
+  display: flex;
+  justify-content: center;
+}
+.advanced-search.card #extSearch .row-sub-menu .sub-menu {
+  margin-bottom: 16px;
+}
+.advanced-search.card #extSearch .row-sub-menu .sub-menu .sub-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 24px 48px;
+}
+.advanced-search.card #extSearch .row-sub-menu .sub-menu .md-form {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+.advanced-search.card #extSearch .row-sub-menu .sub-menu .radio-group {
+  padding-left: 48px;
+}
+.advanced-search.card #extSearch .btn-sort-wrapper {
+  display: flex;
+  justify-content: start;
+  margin: 0 32px 16px 32px;
+}
 
 
 

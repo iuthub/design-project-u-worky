@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Candidates - u-WORKY</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body>
+    <header class="candidate-suggestion-header">
+      
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl navbar-dark scrolling-navbar fixed-top">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="u-WORKY" />
+        </a>
+  
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto d-flex">
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+  
+            <!-- Dropdown -->
+            <li class="nav-item dropdown my-auto">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Jobs</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item text-center" href="#">Job Categories</a>
+                <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                <a class="dropdown-item text-center" href="#">Find on Map</a>
+              </div>
+            </li>
+            <!-- /Dropdown -->
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="candidate-listing.html">Candidates</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Employers</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li>
+              <form class="form-inline">
+                <div class="md-form container-fluid my-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block btn-rounded"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- /Links -->
+        </div>
+        <!-- /Collapsible content -->
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Poster -->
+      <div class="poster poster-md poster-candidate-listing">
+        <div class="container">
+            <div class="row page-title">
+              <h1>
+                CANDIDATE SUGGESTION
+              </h1>
+            </div>
+
+            
+            <form action="">
+              <div class="row search-fields">
+                <div class="search-field col-xl-6 col-lg-6 col-md-12">
+                  <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here...">
+                    <option value="" disabled selected>Enter candidate name...</option>
+                    <option value="1">Ganieva Dildorakhon</option>
+                    <option value="2">Ganieva Dildorakhon</option>
+                    <option value="3">Ganieva Dildorakhon</option>
+                    <option value="4">Ganieva Dildorakhon</option>
+                  </select>
+                  <label>Candidate?</label>
+                </div>
+  
+                <div class="search-field-btn col-xl-1 col-lg-1 col-md-12">
+                  <button type="button" class="btn btn-primary btn-block btn-rounded">
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+    
+
+
+        </div>
+      </div>
+      <!-- /Poster -->
+    </header>
+
+
+
+    <!--Main Layout-->
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+          
+             <div class="advanced-search card">
+              <div class="blue-text">
+                <h6 class="advanced-search-title">Advanced Search
+                  <a onclick="toggleSearch()">
+                    <i class="fas fa-caret-down fa-2x"></i> 
+                  </a>
+                </h6>
+              </div>
+              
+              <form action="">
+                <div class="d-none" id="extSearch">
+
+                  <div class="row row-sub-menu">
+                      <div class="col-xl-4 col-lg-4 col-md-12 sub-menu">
+                        <h6 class="sub-title">Courses</h6>
+                        <select class="mdb-select md-form colorful-select dropdown-primary" multiple>
+                          <option value="" disabled selected>Course...</option>
+                          <option value="1">Freshmen</option>
+                          <option value="2">Sophomore</option>
+                          <option value="3">Junior</option>
+                          <option value="4">Senior</option>
+                        </select>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-12 sub-menu">
+                        <h6 class="sub-title">Sort by</h6>
+                        <select class="mdb-select md-form colorful-select dropdown-primary">
+                          <option value="1">By name</option>
+                          <option value="2">By GPA</option>
+                          <option value="3">By age</option>
+                          <option value="4">By experience</option>
+                        </select>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-12 sub-menu">
+                        <h6 class="sub-title">Skills</h6>
+                        <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here...">
+                          <option value="" disabled selected>Skills...</option>
+                          <option value="1">PHP</option>
+                          <option value="2">JavaScript</option>
+                          <option value="3">HTML</option>
+                          <option value="4">CSS</option>
+                        </select>
+                      </div>
+                  </div>
+
+                  <div class="row btn-sort-wrapper">
+                    <button class="btn btn-primary btn-rounded">Sort</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+
+
+
+            <div class="row">
+              <!-- Card -->
+              <div class="col-lg-12 col-md-12 candidate">
+                <div class="card">
+                  <div class="row">
+                    <!-- Card image -->
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 card-image-wrapper">
+                      <div class="card-image">
+                        <img src="img/testimonial2.jpg" class="img-fluid" alt="">
+                      </div>
+                    </div>
+                    <!--Card image -->
+
+                    <div class="col-xl-10 col-lg-10 col-md-9 col-sm-8">
+                      <!-- Card content -->
+                      <div class="card-body">
+                      
+                        <h5 class="card-title"><strong><a href="">Ganieva Dildorakhon</a></strong></h5>
+                        <h6 class="card-subtitle"><strong><a href="">PHP developer</a></strong></h6>
+                            
+                            <p>
+                              <i class="fas fa-user-graduate pr-3 mb-1 blue-text"></i>Course: Sophomore<br>
+                              <i class="fas fa-award pr-3 mb-1 pink-text"></i>GPA: 4.5<br>
+                              <i class="fas fa-calendar pr-3 mb-1 green-text"></i>Experience: 3 years<br>
+                            </p>
+
+                            <p>
+                              Skills: 
+                              <span class="skill"><i class="fas fa-tag pl-2 pr-1"></i>PHP</span>
+                              <span class="skill"><i class="fas fa-tag pl-2 pr-1"></i>MySQL</span>
+                              <span class="skill"><i class="fas fa-tag pl-2 pr-1"></i>HTML</span>
+                              <span class="skill"><i class="fas fa-tag pl-2 pr-1"></i>CSS</span>
+                            </p>
+
+                            <h6 class="mt-2 mb-0 d-flex justify-content-end"><a href="#" class="green-text font-weight-bold font-small">VIEW RESUME<i class="fa fa-arrow-circle-right green-text ml-2"></i></a></span></h6>
+
+                          </div>
+                      <!-- /Card content -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Card -->
+            </div>
+            
+
+            
+          </div>
+        </div>
+
+
+        <div class="row justify-content-center align-items-center my-4">
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination pagination-circle pg-blue m-0">
+              <li class="page-item disabled"><a class="page-link">First</a></li>
+              <li class="page-item disabled">
+                <a class="page-link" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item"><a class="page-link">4</a></li>
+              <li class="page-item"><a class="page-link">5</a></li>
+              <li class="page-item">
+                <a class="page-link" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link">Last</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+       
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-col">
+              <h5 class="title">ABOUT u-WORKY</h5>
+              <div>
+                <img src="img/logo.png" alt="u-WORKY" />
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quibusdam assumenda sequi ducimus temporibus dolore, libero inventore dolorum error illo.
+              </p>
+              <p>
+                <i class="fab fa-github pr-3 mb-2 blue-text"></i>
+                <a href="https://github.com/iuthub/design-project-u-worky" target="_blank" rel="noopener noreferrer">LINK TO GITHUB</a>
+              </p>
+            </div>
+          </div>  
+          <!--/About -->
+
+          <!-- Done by -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>Project by</h5>
+              <p>Soliev Komroniddin</p>
+              <p>Ganieva Dildora</p>
+              <p>Lim Olga</p>
+              <p>Vakhobov Azamat</p>
+              <p>Islamov Davronbek</p>
+              <p>Tuyeva Mekhribon</p>
+            </div>
+          </div>
+          <!-- /Done by -->
+
+          <!-- ID -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>ID</h5>
+              <p>U1710036</p>
+              <p>U1710272</p>
+              <p>U1710297</p>
+              <p>U1710266</p>
+              <p>U1710261 </p>
+              <p>U1710029</p>
+            </div>
+          </div>
+          <!-- /ID -->
+        </div>
+      </div>
+
+      <!--Copyright-->
+      <div class="copyright">
+        <div class="container-fluid">
+          <p>
+              © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
+          </p>
+        </div>
+      </div>
+      <!--/Copyright-->
+
+    </footer>
+    <!--/Footer-->
+
+
+
+
+
+
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+      // WOW Animations Initialization
+      new WOW().init();
+
+      function toggleSearch(){
+        var extSearch = $("#extSearch");
+        if(extSearch.hasClass('d-none')){
+          $('#extSearch').removeClass('d-none');
+          $('#extSearch').addClass('d-block');
+        } else {
+          $('#extSearch').removeClass('d-block');
+          $('#extSearch').addClass('d-none');
+        }
+      }
+
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+
+      // Tooltips Initialization
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+
+      $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+        var next = $(this).next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+      next.children(':first-child').clone().appendTo($(this));
+
+        for (var i=0;i<3;i++) { 
+          next=next.next(); 
+          if (!next.length) { 
+            next=$(this).siblings(':first'); 
+          }
+          next.children(':first-child').clone().appendTo($(this)); 
+        } 
+      });
+    </script>
+  </body>
+</html>
