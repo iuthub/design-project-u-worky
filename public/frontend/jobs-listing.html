@@ -20,14 +20,14 @@
 
   <body>
     <header>
-      
+
       <!-- Navbar -->
       <nav class="navbar navbar-expand-xl navbar-dark scrolling-navbar fixed-top">
 
         <a class="navbar-brand" href="index.html">
           <img src="img/logo.png" alt="u-WORKY" />
         </a>
-  
+
         <!-- Collapse button -->
         <button
           class="navbar-toggler"
@@ -40,7 +40,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-  
+
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="mainNav">
 
@@ -52,7 +52,7 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-  
+
             <!-- Dropdown -->
             <li class="nav-item dropdown my-auto">
               <a
@@ -73,15 +73,15 @@
               </div>
             </li>
             <!-- /Dropdown -->
-  
+
             <li class="nav-item my-auto">
               <a class="nav-link" href="candidate-listing.html">Candidates</a>
             </li>
-  
+
             <li class="nav-item my-auto">
               <a class="nav-link" href="#">Employers</a>
             </li>
-  
+
             <li class="nav-item my-auto">
               <a class="nav-link" href="#">Contact us</a>
             </li>
@@ -175,11 +175,11 @@
               <div class="blue-text">
                 <h6 class="advanced-search-title">Advanced Search
                   <a onclick="toggleSearch()">
-                    <i class="fas fa-caret-down fa-2x"></i> 
+                    <i class="fas fa-caret-down fa-2x"></i>
                   </a>
                 </h6>
               </div>
-              
+
               <form action="">
                 <div class="d-none" id="extSearch">
 
@@ -188,7 +188,7 @@
                     <!-- Experience -->
                     <div class="col-xl-4 col-lg-4 col-md-12 sub-menu">
                       <h6 class="sub-title">Experience</h6>
-                      
+
                       <!-- Options -->
                       <div class="radio-group">
                         <div class="option">
@@ -208,7 +208,7 @@
                           <label class="form-check-label" for="experience-option-4">More than 6 years</label>
                         </div>
                       </div>
-                      
+
                       <!-- /Options -->
                     </div>
                     <!-- /Experience -->
@@ -236,7 +236,7 @@
                           <label class="form-check-label" for="employment-option-4">Internship</label>
                         </div>
                       </div>
-                      
+
                       <!-- /Options -->
                     </div>
                     <!-- /Employment -->
@@ -264,7 +264,7 @@
                           <label class="form-check-label" for="sort-option-4">By salary descending</label>
                         </div>
                       </div>
-                      
+
                       <!-- /Options -->
                     </div>
                     <!-- /Sorting -->
@@ -304,7 +304,7 @@
 
             </div>
 
-        
+
             <div class="row">
               <!-- Card -->
               <div class="col-lg-6 col-md-6 job">
@@ -405,7 +405,7 @@
 
         </div>
       </div>
-       
+
     </main>
 
 
@@ -446,7 +446,7 @@
               <div>
                 <img src="img/logo.png" alt="u-WORKY" />
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quibusdam assumenda sequi ducimus temporibus dolore, libero inventore dolorum error illo.
               </p>
               <p>
@@ -454,7 +454,7 @@
                 <a href="https://github.com/iuthub/design-project-u-worky" target="_blank" rel="noopener noreferrer">LINK TO GITHUB</a>
               </p>
             </div>
-          </div>  
+          </div>
           <!--/About -->
 
           <!-- Done by -->
@@ -512,7 +512,6 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
     <script>
-      
 
       function toggleSearch(){
         var extSearch = $("#extSearch");
@@ -530,26 +529,6 @@
         $('.mdb-select').materialSelect();
       });
 
-      // Tooltips Initialization
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-
-      $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-        var next = $(this).next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }
-      next.children(':first-child').clone().appendTo($(this));
-
-        for (var i=0;i<3;i++) { 
-          next=next.next(); 
-          if (!next.length) { 
-            next=$(this).siblings(':first'); 
-          }
-          next.children(':first-child').clone().appendTo($(this)); 
-        } 
-      });
     </script>
   </body>
 </html>
