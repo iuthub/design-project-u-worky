@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Add New Job</title>
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body class="fixed-sn dashboard">
+
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav fixed">
+        <ul class="custom-scrollbar">
+          <!-- Logo -->
+          <li>
+            <div class="logo">
+              <a href="#"><img src="img/logo.png"></a>
+            </div>
+          </li>
+          <!-- /Logo -->
+  
+            <li class="user-profile">
+              <img src="img/employer-logo-turon.png" alt="" class="my-auto">
+              <h4>
+                Turon Telecom 
+              </h4>
+            </li>
+
+          <!-- Side navigation links -->
+          <li>
+            <ul class="dashboard-menu">
+              <li><a href="dashboard.html" class="collapsible-header waves-effect"><i class=" ion-ios-contact pr-3"></i>
+                <span>DASHBOARD</span></a>
+              </li>
+              <li><a href="dashboard-add-new-job.html" class="collapsible-header waves-effect"><i class=" ion-ios-compose pr-3"></i>
+                <span>ADD NEW JOB</span></a>
+              </li>
+              <li><a href="dashboard-all-jobs.html" class="collapsible-header waves-effect"><i class=" ion-briefcase pr-3"></i>
+                <span>ALL JOBS</span></a>
+              </li>
+              <li><a href="dashboard-applications.html" class="collapsible-header waves-effect"><i class=" ion-ios-people pr-3"></i>
+                <span>APPLICATIONS</span></a>
+              </li>
+              <li><a href="dashboard-saved-resumes.html" class="collapsible-header waves-effect"><i class=" ion-ios-bookmarks pr-3"></i>
+                <span>SAVED RESUMES</span></a>
+              </li>
+              <li><a href="#" class="collapsible-header waves-effect"><i class=" fa fas fa-power-off pr-3"></i>
+                <span>LOG OUT</span></a>
+              </li>
+            </ul>
+          </li>
+          <!-- /Side navigation links -->
+
+        </ul>
+      </div>
+      <!-- /Sidebar navigation -->
+  
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg top-nav-collapse double-nav">
+        <!-- SideNav slide-out button -->
+        <div class="float-left">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars white-text"></i></a>
+        </div>
+  
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user pr-2"></i>Profile
+            </a>
+            <div class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Home</a>
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" href="#">Log Out</a>
+            </div>
+          </li>
+  
+        </ul>
+        <!-- /Navbar links -->
+      </nav>
+      <!-- /Navbar -->
+    </header>
+    <!--Main Navigation-->
+   
+    <!-- Main layout -->
+    <main>
+      <div class="container-fluid">
+        <div class="card my-4">
+          <div class="card-body">
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Job title
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="text" id="name" name="name" value="" class="form-control" required>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Description
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <textarea type="text" id="description" name="description" class="form-control" rows="3" required></textarea>                
+                </div>
+              </div>  
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Job category
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <select class="mdb-select md-form colorful-select dropdown-primary" name="category_id" required>
+                    <option value="" disabled selected></option>
+                    <option value="1">IT &amp; Computer</option>
+                    <option value="2">Finance &amp; Logistics</option>
+                    <option value="3">Arts, Media, Design</option>
+                    <option value="4">Education</option>
+                    <option value="5">Engineering</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Job type
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <select class="mdb-select md-form colorful-select dropdown-primary" name="type" required>
+                    <option value="" disabled selected></option>
+                    <option value="1">Full-time</option>
+                    <option value="2">Part-time</option>
+                    <option value="3">Contract</option>
+                    <option value="4">Internship</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Working hours
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="number" name="working_hours" value="" class="form-control" required>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Required skills
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <select class="mdb-select md-form colorful-select dropdown-primary" name="skills" multiple searchable="Search here..." required>
+                    <option value="" disabled selected></option>
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                    <option value="4">PHP</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Salary
+                </div>
+                <div class="col-xl-4 col-lg-4">
+                  <div class="md-form">
+                    <input type="number" placeholder="From..." name="salary_id_from" value="" class="form-control" required>                  
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                  <div class="md-form">
+                    <input type="number" placeholder="To..." name="salary_id_to" value="" class="form-control" required>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Featured
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="switch mt-2 mb-1">
+                    <label>
+                      <input type="checkbox" name="is_featured">
+                      <span class="lever mx-0"></span> 
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Deadline 
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="text" id="date-picker" name="deadline" class="form-control datepicker" data-value="">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Address
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="text" id="location" name="location" value="" class="form-control">
+                  </div>
+                </div>
+              </div>
+
+               
+
+              <div class="row form-item">
+                <div class="col-12 btn-publish-wrapper">
+                  <button type="button" class="btn-publish btn btn-primary btn-rounded"><i class="ion-android-send pr-2" aria-hidden="true"></i>Publish</button>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+   
+
+
+
+
+
+    <!--Footer-->
+    <footer>
+      <!--Copyright-->
+      <div class="copyright">
+        <div class="container-fluid">
+          <p>
+              © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
+          </p>
+        </div>
+      </div>
+      <!--/Copyright-->
+    </footer>
+    <!--/Footer-->
+
+   
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <!-- TinyMCE -->
+    <script type="text/javascript" src="js/vendor/tinymce/tinymce.min.js"></script>
+    <script>
+      // SideNav Initialization
+      $(".button-collapse").sideNav();
+      
+      // Material Select Initialization
+      $(document).ready(function() {
+        $('.mdb-select').materialSelect();
+      });
+
+      // Data Picker Initialization
+      $('.datepicker').pickadate();
+
+      var skills = [
+        "PHP",
+        "C++",
+        "Java",
+        "JavaScript"
+      ];
+
+      $('#form-autocomplete').mdb_autocomplete({
+        data: skills
+      });
+
+      // TinyMCE Initialization
+      tinymce.init({ selector:'#description', menubar: false, height : "300" });
+    </script>
+
+  </body>
+</html>
