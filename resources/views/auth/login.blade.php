@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('navbar')
+    @include('partials.navbar', ['type' => 0])
+@endsection
 
 @section('content')
 {{-- <div class="container">

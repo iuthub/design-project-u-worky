@@ -22,15 +22,11 @@ class CreateJobsTable extends Migration
             $table->integer('location_id');
             $table->string('name', 255);
             $table->set('type', ['full_time', 'part_time', 'contract', 'internship']);
-            $table->integer('dedline');            
             $table->integer('deadline');
             $table->tinyInteger('working_hours');
             $table->text('description');
             $table->boolean('is_featured');
             $table->boolean('status');
-
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
         });
     }
 

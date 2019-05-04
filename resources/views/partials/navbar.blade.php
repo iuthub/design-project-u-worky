@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-xl navbar-dark scrolling-navbar fixed-top">
-
+<nav class="navbar navbar-expand-xl navbar-dark @if($type) scrolling-navbar @else top-nav-collapse @endif fixed-top">
     <a class="navbar-brand" href="index.html">
         <img src="{{asset('frontend/img/logo.png')}}" alt="u-WORKY" />
     </a>

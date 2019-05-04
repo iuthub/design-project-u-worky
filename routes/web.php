@@ -12,7 +12,26 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('dashboard/index');
 })->name('home');
 
+
+Route::group([
+    'prefix' => 'admin'], function () {
+        Route::get('jobs', [
+            'uses' => 'AdminController@getJobsIndex',
+            'as' => 'admin.addnewjob'
+        ]);
+
+        Route::get('', [
+            'uses' => 'AdminController@getIndex',
+            'as' => 'admin.main'
+        ]);
+});
+
 Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
+

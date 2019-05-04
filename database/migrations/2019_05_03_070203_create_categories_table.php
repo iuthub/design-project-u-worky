@@ -21,9 +21,6 @@ class CreateCategoriesTable extends Migration
             $table->string('icon', 255);
             $table->string('description', 255);
             $table->integer('count');
-            
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
         });
     }
 

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{asset('frontend/fonts/font-awesome/css/all.css')}}">
 </head>
 
-<body>
+<body class="fixed-sn dashboard">
     <header class="@yield('header')">
         <!--Navbar-->
         @yield('navbar')
@@ -33,7 +33,7 @@
     </header>
 
     <!--Main Layout-->
-    <main class="text-center">
+    <main>
         @yield('content')
     </main>
     <!--Main Layout-->

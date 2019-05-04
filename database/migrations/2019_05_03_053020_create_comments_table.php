@@ -19,9 +19,6 @@ class CreateCommentsTable extends Migration
             $table->bigInteger('user_id');
             $table->text('text');
             $table->tinyInteger('mark');
-            
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
         });
     }
 
