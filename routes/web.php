@@ -51,7 +51,7 @@ Route::group([
         'as' => 'jobs'
     ]);
 
-    Route::post('jobs',  [
+    Route::post('jobs/{id}',  [
         'uses' => 'MainController@jobsByCategory',
         'as' => 'jobsByCategory'
     ]);
