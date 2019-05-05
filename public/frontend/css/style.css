@@ -385,7 +385,7 @@ footer.page-footer {
 }
 .badge a,
 .badge a:hover {
-  color: white;
+  color: white !important;
 }
 .candidate .card .card-image img {
   border-radius: 10rem;
@@ -871,6 +871,32 @@ footer img {
 .dashboard #map {
   height: 360px;
 }
+
+
+
+.dashboard .top-table {
+  padding: 16px;
+  margin-bottom: 32px;
+}
+.dashboard .top-table-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard .card-header {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+  text-align: center;
+  font-size: 24px;
+}
+.dashboard .card-header h3 {
+  color: white;
+  margin: 8px 16px;
+}
+.dashboard tr, .dashboard th {
+  text-align: center;
+}
 /* /Dashboard */
 
 
@@ -1332,8 +1358,6 @@ footer img {
 
 
 /* MAP SEARCH */
-
-
 .search-map .search-map-left {
   padding: 30px;
   background: white ;
@@ -1423,6 +1447,4 @@ footer img {
   width:100%;
   position:absolute;
 }
-
-
 /* /MAP SEARCH */
