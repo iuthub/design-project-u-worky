@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Models\Job\Category;
 use App\Http\Models\Job\Job;
+use App\Http\Models\Job\Relations\JobSkill;
 use App\Http\Models\User\User;
 
 class MainController extends Controller {
@@ -32,6 +33,13 @@ class MainController extends Controller {
 
     public function postJobs(Request $request){
         $data = $request->input();
-        return view('dashboard.jobs');
+        $jobs_id = JobSkill::where('skill_id', $data['keyword'])->get();
+        $jobs = Job::where('category_id', $data['category']);
+        $arr = array();
+        foreach($jobs_id as $i){
+            array_push($arr, $jobs->first('id', $i->job_id));
+        }
+
+        return view('dashboard.jobs', ['jobs' => $arr]);
     }
 }
