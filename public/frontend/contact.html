@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Contact Us - u-WORKY</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body>
+    <header>      
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl navbar-dark top-nav-collapse fixed-top">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="u-WORKY" />
+        </a>
+  
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto d-flex">
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+  
+            <!-- Dropdown -->
+            <li class="nav-item dropdown my-auto">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Jobs</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item text-center" href="#">Job Categories</a>
+                <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                <a class="dropdown-item text-center" href="#">Find on Map</a>
+              </div>
+            </li>
+            <!-- /Dropdown -->
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="candidate-listing.html">Candidates</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Employers</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li>
+              <form class="form-inline">
+                <div class="md-form container-fluid my-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block btn-rounded"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- /Links -->
+        </div>
+        <!-- /Collapsible content -->
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Poster -->
+      <div class="poster poster-sm poster-contact">
+        <div class="container">
+
+          <div class="row page-title">
+            <h1>
+              CONTACT US
+            </h1>
+          </div>
+
+
+          
+        </div>
+      </div>
+      <!-- /Poster -->
+    </header>
+
+
+    <main>
+
+      <div class="container">
+        <div class="row contact-card-wrapper">
+          <!-- Contact Card -->
+          <div class="card contact-card">
+            <div class="row">
+              <!-- Contact Left -->
+              <div class="col-lg-8">
+                <div class="card-body contact-card-left">
+
+                  <!-- Header -->
+                  <h3 class="contact-header"><i class="fas fa-envelope pr-3"></i>KEEP IN TOUCH:</h3>
+                  
+                  <form action="">
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="md-form">
+                          <input type="text" id="form-contact-name" name="form-contact-name" class="form-control">
+                          <label for="form-contact-name" class="">Your name</label>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-4">
+                        <div class="md-form">
+                          <input type="text" id="form-contact-email" name="form-contact-email" class="form-control">
+                          <label for="form-contact-email" class="">Your email</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="md-form">
+                          <input type="text" id="form-contact-phone" name="form-contact-phone" class="form-control">
+                          <label for="form-contact-phone" class="">Your phone</label>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form">
+                          <textarea type="text" id="form-contact-message" name="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
+                          <label for="form-contact-message">Your message</label>
+
+                          <div class="btn-contact-wrapper">
+                            <button class="btn btn-outline-primary btn-rounded" type="submit">Send
+                              <i class="fas fa-paper-plane pl-2"></i>
+                            </button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+                
+                </div>
+              </div>
+              <!-- Contact Left -->
+
+              <!-- Contact Right -->
+              <div class="col-lg-4">
+                <div class="card-body contact-card-right">
+
+                  <h3 class="contact-header">Contact information</h3>
+                  
+                  <p><i class="fas fa-envelope pr-3"></i>u-worky@gmail.com</p>
+
+                  <p><i class="fas fa-phone pr-3"></i>+998 (93) 535 44 25</p>
+                
+                </div>
+              </div>
+              <!-- Contact Right -->
+            </div>
+
+          </div>
+          <!-- /Contact Card -->
+        </div>
+      </div>
+       
+    </main>
+
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+ 
+  </body>
+</html>
