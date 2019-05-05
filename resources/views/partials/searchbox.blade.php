@@ -1,7 +1,7 @@
-<form action="">
+<form action="{{ route('findJob') }}" id = "findJob" method="post">
     <div class="row search-fields">
         <div class="search-field col-xl col-lg col-md-12">
-            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here..." name = "keywords[]">
+            <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "keyword">
                 <option value="" disabled selected>Enter job title...</option>
                 <option value="1">PHP</option>
                 <option value="2">Android</option>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="search-field col-xl col-lg col-md-12">
-            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here..." name = "locations[]"">
+            <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "location">
                 <option value="" disabled selected>Enter location...</option>
                 <option value="1">Uzbekistan</option>
                 <option value="2">USA</option>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="search-field-btn col-xl-1 col-lg-1 col-md-12">
-            <button type="button" class="btn btn-primary btn-block btn-rounded">
+            <button type="submit" class="btn btn-primary btn-block btn-rounded" id = "searchButton">
                 <i class="fas fa-arrow-right"></i>
             </button>
         </div>

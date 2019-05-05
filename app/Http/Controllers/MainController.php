@@ -31,9 +31,8 @@ class MainController extends Controller {
     }
 
     public function findJobs(Request $request){
-        $data = $request->input();
-
         
+        return redirect("/");
 
     }
 }

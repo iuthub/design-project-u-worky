@@ -45,6 +45,11 @@ Route::group([
         'uses' => 'MainController@getJobs',
         'as' => 'jobs'
     ]);
+
+    Route::post('job',  [
+        'uses' => 'MainController@findJobs',
+        'as' => 'findJob'
+    ]);
 });
 
 

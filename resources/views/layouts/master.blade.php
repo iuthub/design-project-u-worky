@@ -56,6 +56,10 @@
         // Material Select Initialization
         $(document).ready(function() {
             $('.mdb-select').materialSelect();
+
+            // $("#searchButton").click(function() {
+            //     $("#findJob").submit();
+            // });
         });
     </script>
     @yield('scripts')
