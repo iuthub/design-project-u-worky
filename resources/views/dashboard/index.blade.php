@@ -32,7 +32,7 @@ Main
             <div class="row categories">
 
                 @foreach ($categories as $item)
-                <a href="">
+                <a href="{{route('jobsByCategory', ['id' => $item->id])}}">
                     <div class="col-xl col-lg-6 col-md-6 col-12">
                         <div class="item-category">
                             <!-- Card -->
@@ -42,7 +42,6 @@ Main
                                     <h6 class="card-title">
                                         <strong><a href="#">{{$item->name}}</a></strong>
                                     </h6>
-                                    <p>( 10 jobs )</p>
                                 </div>
                             </div>
                             <!-- Card -->

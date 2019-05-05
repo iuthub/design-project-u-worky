@@ -46,7 +46,7 @@ class MainController extends Controller {
 
     public function jobsByCategory($id){
         $jobs = new Job();
-        $jobs = $jobs->where('category_id', '=', $request);
+        $jobs = $jobs->where('category_id', '=', $id)->get();
         return view('dashboard.jobs', ['jobs' => $jobs]);
     }
 }
