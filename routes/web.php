@@ -50,6 +50,11 @@ Route::group([
         'uses' => 'MainController@postJobs',
         'as' => 'jobs'
     ]);
+
+    Route::post('jobs',  [
+        'uses' => 'MainController@jobsByCategory',
+        'as' => 'jobsByCategory'
+    ]);
 });
 
 
