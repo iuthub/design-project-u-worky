@@ -15,25 +15,24 @@
             </div>
 
             <div class="col-md-7 col-7">
-                <h1 class="user-title">Turon Telecom</h1>
-                <h4 class="user-sub-title">Internet Provider</h4>
+                <h1 class="user-title">{{Auth::user()->name}}</h1>
+                {{-- <h4 class="user-sub-title">Internet Provider</h4> --}}
 
                 <div class="row user-info">
                     <div class="col-lg-6 col-md-12">
                         <i class="fas fa-map-marker-alt red-text"></i><strong>Address
-                            :</strong><br><span>Tashkent, Mustakillik str. 5/1</span>
+                            :</strong><br><span>{{Auth::user()->location()->name}}</span>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <i class="fas fa-envelope orange-text"></i><strong>Email :</strong><br><span>
-                            info@turon.uz</span>
+                            {{Auth::user()->email}}</span>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <i class="fas fa-phone green-text"></i><strong>Phone :</strong><br><span>(+99871)
-                            252-74-77</span>
+                        <i class="fas fa-phone green-text"></i><strong>Phone :</strong><br><span>{{Auth::user()->number}}</span>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <i class="fa fa-globe blue-text"></i><strong>Website
-                            :</strong><br><span>http://turontelecom.uz/</span>
+                            :</strong><br><span>{{Auth::user()->website}}</span>
                     </div>
                 </div>
 
