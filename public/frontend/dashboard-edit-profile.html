@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Add New Job</title>
-  
+    <title>Edit Profile</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/mdb.min.css">
@@ -43,22 +43,22 @@
           <!-- Side navigation links -->
           <li>
             <ul class="dashboard-menu">
-              <li><a href="dashboard.html" ><i class=" ion-ios-contact pr-3"></i>
+              <li><a href="dashboard.html"><i class=" ion-ios-contact pr-3"></i>
                 <span>DASHBOARD</span></a>
               </li>
-              <li><a href="dashboard-add-new-job.html" ><i class=" ion-ios-compose pr-3"></i>
+              <li><a href="dashboard-add-new-job.html"><i class=" ion-ios-compose pr-3"></i>
                 <span>ADD NEW JOB</span></a>
               </li>
-              <li><a href="dashboard-all-jobs.html" ><i class=" ion-briefcase pr-3"></i>
+              <li><a href="dashboard-all-jobs.html"><i class=" ion-briefcase pr-3"></i>
                 <span>ALL JOBS</span></a>
               </li>
-              <li><a href="dashboard-applications.html" ><i class=" ion-ios-people pr-3"></i>
+              <li><a href="dashboard-applications.html"><i class=" ion-ios-people pr-3"></i>
                 <span>APPLICATIONS</span></a>
               </li>
-              <li><a href="dashboard-saved-resumes.html" ><i class=" ion-ios-bookmarks pr-3"></i>
+              <li><a href="dashboard-saved-resumes.html"><i class=" ion-ios-bookmarks pr-3"></i>
                 <span>SAVED RESUMES</span></a>
               </li>
-              <li><a href="#" ><i class=" fa fas fa-power-off pr-3"></i>
+              <li><a href="#"><i class=" fa fas fa-power-off pr-3"></i>
                 <span>LOG OUT</span></a>
               </li>
             </ul>
@@ -103,124 +103,91 @@
         <div class="card my-4">
           <div class="card-body">
 
+            <form action="">
+
               <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Job title
+                <div class="col-xl-3 col-lg-3 form-item-title edit-profile-avatar-wrapper">
+                  <img src="img/employer-logo-turon.png" alt="" class="edit-profile-avatar img-fluid">
                 </div>
                 <div class="col-xl-9 col-lg-9">
                   <div class="md-form">
-                    <input type="text" id="name" name="name" value="" class="form-control" required>                  
+                    <p class="text-center ml-2">Update your photo manually, If the photo is not set, the default avatar will be the same as your login email account</p>
+                    <div class="file-field">
+                        <div class="btn btn-primary btn-sm btn-rounded float-left">
+                          <span>Upload photo</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" placeholder="Upload your file">
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
 
               <div class="row form-item">
                 <div class="col-xl-3 col-lg-3 form-item-title">
-                  Description
+                  Company Name
                 </div>
                 <div class="col-xl-9 col-lg-9">
-                  <textarea type="text" id="description" name="description" class="form-control" rows="3" required></textarea>                
+                  <div class="md-form">
+                    <input type="text" id="edit-name" name="edit-name" class="form-control" placeholder="Enter Company Name...">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Company Subtitle
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="text" id="edit-subtitle" name="edit-subtitle" class="form-control" placeholder="Enter Company Subtitle...">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Company Details
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <textarea name="" id="company-details"></textarea>
                 </div>
               </div>  
-
+              
               <div class="row form-item">
                 <div class="col-xl-3 col-lg-3 form-item-title">
-                  Job category
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                  <select class="mdb-select md-form colorful-select dropdown-primary" name="category_id" required>
-                    <option value="" disabled selected></option>
-                    <option value="1">IT &amp; Computer</option>
-                    <option value="2">Finance &amp; Logistics</option>
-                    <option value="3">Arts, Media, Design</option>
-                    <option value="4">Education</option>
-                    <option value="5">Engineering</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Job type
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                  <select class="mdb-select md-form colorful-select dropdown-primary" name="type" required>
-                    <option value="" disabled selected></option>
-                    <option value="1">Full-time</option>
-                    <option value="2">Part-time</option>
-                    <option value="3">Contract</option>
-                    <option value="4">Internship</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Working hours
+                  Email
                 </div>
                 <div class="col-xl-9 col-lg-9">
                   <div class="md-form">
-                    <input type="number" name="working_hours" value="" class="form-control" required>                  
+                    <input type="email" id="edit-email" name="edit-email" class="form-control" placeholder="Enter Email...">
                   </div>
                 </div>
               </div>
 
               <div class="row form-item">
                 <div class="col-xl-3 col-lg-3 form-item-title">
-                  Required skills
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                  <select class="mdb-select md-form colorful-select dropdown-primary" name="skills" multiple searchable="Search here..." required>
-                    <option value="" disabled selected></option>
-                    <option value="1">HTML</option>
-                    <option value="2">CSS</option>
-                    <option value="3">JavaScript</option>
-                    <option value="4">PHP</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Salary
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                  <div class="md-form">
-                    <input type="number" placeholder="From..." name="salary_id_from" value="" class="form-control" required>                  
-                  </div>
-                </div>
-                <div class="col-xl-5 col-lg-5">
-                  <div class="md-form">
-                    <input type="number" placeholder="To..." name="salary_id_to" value="" class="form-control" required>                  
-                  </div>
-                </div>
-              </div>
-
-              <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Featured
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                  <div class="switch mt-2 mb-1">
-                    <label>
-                      <input type="checkbox" name="is_featured">
-                      <span class="lever mx-0"></span> 
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row form-item">
-                <div class="col-xl-3 col-lg-3 form-item-title">
-                  Deadline 
+                  Phone
                 </div>
                 <div class="col-xl-9 col-lg-9">
                   <div class="md-form">
-                    <input type="text" id="date-picker" name="deadline" class="form-control datepicker" data-value="">
+                    <input type="text" id="edit-phone" name="edit-phone" class="form-control" placeholder="Enter Phone...">
                   </div>
                 </div>
               </div>
 
+              <div class="row form-item">
+                <div class="col-xl-3 col-lg-3 form-item-title">
+                  Website
+                </div>
+                <div class="col-xl-9 col-lg-9">
+                  <div class="md-form">
+                    <input type="text" id="edit-website" name="edit-website" class="form-control" placeholder="Enter Website...">
+                  </div>
+                </div>
+              </div>
 
               <div class="row form-item">
                 <div class="col-xl-3 col-lg-3 form-item-title">
@@ -228,27 +195,62 @@
                 </div>
                 <div class="col-xl-9 col-lg-9">
                   <div class="md-form">
-                    <input type="text" id="location" name="location" value="" class="form-control">
+                    <input type="text" id="edit-address" name="edit-address" class="form-control" placeholder="Enter Address...">
                   </div>
                 </div>
               </div>
 
-               
+              <!-- MAP -->
 
               <div class="row form-item">
                 <div class="col-12 btn-change-wrapper">
-                  <button type="button" class="btn-publish btn btn-primary btn-rounded"><i class="ion-android-send pr-2" aria-hidden="true"></i>Publish</button>
+                  <button type="button" class="btn-save-profile btn btn-primary btn-rounded">Update Profile</button>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <div class="card my-4">
+          <div class="card-body">
+
+            <form action="">
+
+              <div class="row form-item">
+                <div class="col-lg-6 col-md-12">
+                  <div class="md-form my-3">
+                    <input type="text" id="edit-current-password" name="edit-current-password" class="form-control">
+                    <label for="edit-current-password">Current password</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                  <div class="md-form my-3">
+                    <input type="text" id="edit-new-password" name="edit-new-password" class="form-control">
+                    <label for="edit-new-password">New password</label>
+                  </div>
                 </div>
               </div>
 
 
+              <div class="row form-item">
+                <div class="col-12 d-flex justify-content-end">
+                  <button type="button" class="btn-save-profile btn btn-primary btn-rounded">Change Password</button>
+                </div>
+              </div>
+            
+            </form>
+
           </div>
         </div>
       </div>
+         
     </main>
+    <!-- Main layout -->
    
-
-
 
 
 
@@ -258,14 +260,15 @@
       <div class="copyright">
         <div class="container-fluid">
           <p>
-              © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
+            © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
           </p>
         </div>
       </div>
       <!--/Copyright-->
     </footer>
     <!--/Footer-->
-
+   
+   
    
     <!--  SCRIPTS  -->
     <!-- JQuery -->
@@ -302,8 +305,9 @@
       });
 
       // TinyMCE Initialization
-      tinymce.init({ selector:'#description', menubar: false, height : "300" });
+      tinymce.init({ selector:'#company-details', menubar: false, height : "300" });
     </script>
+
 
   </body>
 </html>
