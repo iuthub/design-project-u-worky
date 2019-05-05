@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>All Jobs</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body class="fixed-sn dashboard">
+
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav fixed">
+        <ul class="custom-scrollbar">
+          <!-- Logo -->
+          <li>
+            <div class="logo">
+              <a href="#"><img src="img/logo.png"></a>
+            </div>
+          </li>
+          <!-- /Logo -->
+  
+            <li class="user-profile">
+              <img src="img/employer-logo-turon.png" alt="" class="my-auto">
+              <h4>
+                Turon Telecom 
+              </h4>
+            </li>
+
+          <!-- Side navigation links -->
+          <li>
+            <ul class="dashboard-menu">
+              <li><a href="dashboard.html" ><i class=" ion-ios-contact pr-3"></i>
+                <span>DASHBOARD</span></a>
+              </li>
+              <li><a href="dashboard-add-new-job.html" ><i class=" ion-ios-compose pr-3"></i>
+                <span>ADD NEW JOB</span></a>
+              </li>
+              <li><a href="dashboard-all-jobs.html" ><i class=" ion-briefcase pr-3"></i>
+                <span>ALL JOBS</span></a>
+              </li>
+              <li><a href="dashboard-applications.html" ><i class=" ion-ios-people pr-3"></i>
+                <span>APPLICATIONS</span></a>
+              </li>
+              <li><a href="dashboard-saved-resumes.html" ><i class=" ion-ios-bookmarks pr-3"></i>
+                <span>SAVED RESUMES</span></a>
+              </li>
+              <li><a href="#" ><i class=" fa fas fa-power-off pr-3"></i>
+                <span>LOG OUT</span></a>
+              </li>
+            </ul>
+          </li>
+          <!-- /Side navigation links -->
+
+        </ul>
+      </div>
+      <!-- /Sidebar navigation -->
+  
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg top-nav-collapse double-nav">
+        <!-- SideNav slide-out button -->
+        <div class="float-left">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars white-text"></i></a>
+        </div>
+  
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user pr-2"></i>Profile
+            </a>
+            <div class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Home</a>
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" href="#">Log Out</a>
+            </div>
+          </li>
+  
+        </ul>
+        <!-- /Navbar links -->
+      </nav>
+      <!-- /Navbar -->
+    </header>
+    <!--Main Navigation-->
+   
+    <!-- Main layout -->
+    <main>
+      <div class="container-fluid">
+
+          <!-- Top Table -->
+          <div class="card top-table">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-12 top-table-item">
+                <form class="form-inline md-form">
+                  <input class="form-control" type="text" placeholder="Search here..." style="max-width: 200px;">
+                  <button class="btn btn-sm btn-primary"><i class="fas fa-search"></i></button>
+                </form>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 top-table-item">
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Actions</button>
+                
+                  <div class="dropdown-menu dropdown-primary text-center">
+                    <a class="dropdown-item" href="#">Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Top Table -->
+
+          <div class="card">
+
+            <div class="card-header gradient-blue">
+              <h3>All Jobs</h3>
+            </div>
+
+            <div class="px-4">
+
+              <div class="table-responsive">
+                <!-- Table -->
+                <table class="table table-hover">
+
+                  <!-- Table head -->
+                  <thead>
+                    <tr>
+                      <th>
+                        <input class="form-check-input" type="checkbox" id="checkbox">
+                        <label class="form-check-label" for="checkbox"></label>
+                      </th>
+                      <th>Title</i></th>
+                      <th>Category</i></th>
+                      <th>Type</i></th>
+                      <th>Hours</i></th>
+                      <th>Salary</a></th>
+                      <th>Deadline</a></th>
+                      <th>Featured</a></th>
+                    </tr>
+                  </thead>
+                  <!-- Table head -->
+
+                  <!-- Table body -->
+                  <tbody>
+                    <tr>
+                      <th>
+                        <input class="form-check-input" type="checkbox" id="checkbox1">
+                        <label class="form-check-label" for="checkbox1"></label>
+                      </th>
+                      <td>
+                        <strong><a href="#" class="font-weight-bold">Senior PHP Web Developer</a></strong>
+                      </td>
+                      <td>IT &amp; Computer</td>
+                      <td><span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span></td>
+                      <td>8</td>
+                      <td>$1,100 - $2,400</td>
+                      <td>22.12.2012</td>
+                      <td><i class="fas fa-star orange-text"></i></td>
+                    </tr>
+
+
+                    <tr>
+                      <th>
+                        <input class="form-check-input" type="checkbox" id="checkbox2">
+                        <label class="form-check-label" for="checkbox2"></label>
+                      </th>
+                      <td>
+                        <strong><a href="#" class="font-weight-bold">Middle PHP Web Developer</a></strong>
+                      </td>
+                      <td>IT &amp; Computer</td>
+                      <td><span class="badge badge-pill pink"><a href="#">PART - TIME</a></span></td>
+                      <td>12</td>
+                      <td>$800 - $1,400</td>
+                      <td>22.12.2012</td>
+                      <td><i class="far fa-star orange-text"></i></td>
+                    </tr>
+                  
+                  
+                     
+                  </tbody>
+                  <!-- Table body -->
+                </table>
+                <!-- Table -->
+              </div>
+
+              <hr class="my-0">
+
+
+              <!-- Bottom Table UI -->
+              <div class="row justify-content-center align-items-center my-4">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination pagination-circle pg-blue m-0">
+                    <li class="page-item disabled"><a class="page-link">First</a></li>
+                    <li class="page-item disabled">
+                      <a class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item"><a class="page-link">4</a></li>
+                    <li class="page-item"><a class="page-link">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link">Last</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- Bottom Table UI -->
+
+            </div>
+          </div>
+
+      </div>
+            
+    </main>
+    <!-- Main layout -->
+   
+
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer pt-0">
+   
+      <div class="footer-copyright py-3 text-center">
+        <div class="container-fluid">
+          © 2019 Copyright: <a href="#" target="_blank"> u-WORKY </a>
+        </div>
+      </div>
+   
+    </footer>
+    <!-- Footer -->
+   
+   
+   
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+      // SideNav Initialization
+      $(".button-collapse").sideNav();
+      
+    </script>
+
+  </body>
+</html>
