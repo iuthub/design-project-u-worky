@@ -894,9 +894,14 @@ footer img {
   color: white;
   margin: 8px 16px;
 }
-.dashboard tr, .dashboard th {
+.dashboard tr, .dashboard th, .dashboard td {
   text-align: center;
+  vertical-align: middle !important;
 }
+.dashboard .applier-avatar {
+  border-radius: 10rem;
+}
+
 /* /Dashboard */
 
 
