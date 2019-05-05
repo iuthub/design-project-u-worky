@@ -30,9 +30,7 @@ class MainController extends Controller {
         return view('dashboard.jobs');
     }
 
-    public function findJobs(Request $request){
-        
-        return redirect("/");
-
+    public function postJobs(Request $request){
+        return redirect("");
     }
 }

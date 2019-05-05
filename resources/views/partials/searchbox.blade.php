@@ -1,4 +1,5 @@
-<form action="{{ route('findJob') }}" id = "findJob" method="post">
+<form action="{{ route('jobs') }}" id = "findJob" method="post">
+    @csrf
     <div class="row search-fields">
         <div class="search-field col-xl col-lg col-md-12">
             <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "keyword">
