@@ -4,10 +4,12 @@
         <div class="search-field col-xl col-lg col-md-12">
             <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "keyword">
                 <option value="" disabled selected>Enter job title...</option>
-                <option value="1">PHP</option>
-                <option value="2">Android</option>
-                <option value="3">IOS</option>
-                <option value="4">JavaScript</option>
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JavaScript</option>
+                <option value="4">PHP</option>
+                <option value="5">iOS</option>
+                <option value="6">Androi</option>
             </select>
             <label>Keywords?</label>
         </div>
