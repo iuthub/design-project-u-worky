@@ -20,6 +20,9 @@
 </head>
 
 <body class="fixed-sn dashboard">
+    <form action="{{route('logout')}}" method="POST" id="formLogout">
+            @csrf
+    </form>
     <header class="@yield('header')">
         <!--Navbar-->
         @yield('navbar')

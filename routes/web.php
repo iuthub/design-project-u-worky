@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::group([
-    'prefix' => 'admin'], function () {
+    'prefix' => 'admin', 'middleware' => ['auth']], function () {
         Route::get('jobs', [
             'uses' => 'AdminController@getJobsIndex',
             'as' => 'admin.addnewjob'

@@ -9,7 +9,7 @@
     @section('content')
     <div class="container-fluid">
         <div class="card my-4">
-            <form action="{{route('admin.addnewjob')}}" method="post" id="addjob">
+            <form action="{{route('admin.addnewjob')}}" method="post" id="addJobForm">
                 @csrf
                 <div class="card-body">
 
@@ -152,14 +152,10 @@
 
                     <div class="row form-item">
                         <div class="col-12 btn-publish-wrapper">
-                            <button type="button" class="btn-publish btn btn-primary btn-rounded" id="publish"><i
+                            <button type="button" class="btn-publish btn btn-primary btn-rounded" id="publishBtn"><i
                                     class="ion-android-send pr-2" aria-hidden="true"></i>Publish</button>
                         </div>
                     </div>
-
-                    <input type="submit" />
-
-
                 </div>
             </form>
         </div>
@@ -174,9 +170,11 @@
     @section('scripts')
     <script type="text/javascript" src="{{asset('frontend/js/vendor/tinymce/tinymce.min.js')}}"></script>
     <script>
-        $("#publish").click(function() {
-            console.log("hello");
-            $("#addjob").submit();
+        $(document).ready(function() {
+            $("#publishBtn").click(function() {
+                console.log("hello");
+                $("#addJobForm").submit();
+            });
         });
 
         // SideNav Initialization
@@ -195,6 +193,10 @@
         $('#form-autocomplete').mdb_autocomplete({
             data: skills
         });
+
+        function logout() {
+            $('#formLogout').submit();
+        }
 
         // TinyMCE Initialization
         tinymce.init({ selector:'#description', menubar: false, height : "300" });

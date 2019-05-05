@@ -49,7 +49,7 @@
                             <div class="switch">
                                 <label>
                                     Candidate
-                                    <input type="checkbox">
+                                    <input type="checkbox"{{request()->type == 'employer' ? 'checked' : ''}} value="1">
                                     <span class="lever"></span> Employer
                                 </label>
                             </div>

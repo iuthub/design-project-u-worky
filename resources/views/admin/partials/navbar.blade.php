@@ -14,7 +14,11 @@
             <div class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="{{route('home')}}">Home</a>
                 <a class="dropdown-item" href="{{route('admin.main')}}">Dashboard</a>
-                <a class="dropdown-item" href="{{route('logout')}}">Log Out</a>
+                <form action="{{route('logout')}}" method="POST" class="w-auto">
+                    <input class="dropdown-item" type="submit" value="Log Out">
+                    @csrf
+                </form>
+                {{-- <a class="dropdown-item" onclick="logout();">Log Out</a> --}}
             </div>
         </li>
 

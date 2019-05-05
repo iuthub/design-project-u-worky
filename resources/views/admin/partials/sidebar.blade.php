@@ -18,28 +18,30 @@
         <!-- Side navigation links -->
         <li>
             <ul class="dashboard-menu">
-                <li><a href="{{route('admin.main')}}" class="collapsible-header waves-effect"><i
+                <li><a href="{{route('admin.main')}}"  ><i
                             class=" ion-ios-contact pr-3"></i>
                         <span>DASHBOARD</span></a>
                 </li>
-                <li><a href="{{route('admin.addnewjob')}}" class="collapsible-header waves-effect"><i
+                <li><a href="{{route('admin.addnewjob')}}"  ><i
                             class=" ion-ios-compose pr-3"></i>
                         <span>ADD NEW JOB</span></a>
                 </li>
-                <li><a href="dashboard-all-jobs.html" class="collapsible-header waves-effect"><i
+                <li><a href="dashboard-all-jobs.html"  ><i
                             class=" ion-briefcase pr-3"></i>
                         <span>ALL JOBS</span></a>
                 </li>
-                <li><a href="dashboard-applications.html" class="collapsible-header waves-effect"><i
+                <li><a href="dashboard-applications.html"  ><i
                             class=" ion-ios-people pr-3"></i>
                         <span>APPLICATIONS</span></a>
                 </li>
-                <li><a href="dashboard-saved-resumes.html" class="collapsible-header waves-effect"><i
+                <li><a href="dashboard-saved-resumes.html"  ><i
                             class=" ion-ios-bookmarks pr-3"></i>
                         <span>SAVED RESUMES</span></a>
                 </li>
-                <li><a href="#" class="collapsible-header waves-effect"><i class=" fa fas fa-power-off pr-3"></i>
-                        <span>LOG OUT</span></a>
+                <li><a onclick="$('#formLogout').submit();">
+                    <i class=" fa fas fa-power-off pr-3"></i>
+                        <span>LOG OUT</span>
+                    </a>
                 </li>
             </ul>
         </li>

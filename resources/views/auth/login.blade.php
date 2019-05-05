@@ -95,7 +95,7 @@
                             <!-- Name -->
                             <div class="md-form">
                                 <i class="fas fa-user prefix d-flex"></i>
-                                <input type="text" id="name" name="name" class="form-control" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input type="text" id="name" name="email" class="form-control" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 <label for="name">Email</label>
                             </div>
 

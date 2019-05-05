@@ -16,17 +16,17 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->integer('category_id');
-            $table->integer('employer_id');
-            $table->integer('salary_id');
-            $table->integer('location_id');
+            // $table->integer('category_id');
+            // $table->integer('employer_id');
+            // $table->integer('salary_id');
+            // $table->integer('location_id');
             $table->string('name', 255);
             $table->set('type', ['full_time', 'part_time', 'contract', 'internship']);
-            $table->integer('deadline');
-            $table->tinyInteger('working_hours');
-            $table->text('description');
-            $table->boolean('is_featured');
-            $table->boolean('status');
+            // $table->integer('deadline');
+            // $table->tinyInteger('working_hours');
+            // $table->text('description');
+            // $table->boolean('is_featured');
+            // $table->boolean('status');
         });
     }
 
