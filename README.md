@@ -15,6 +15,6 @@
 6) Tuyeva Mekhribon:        U1710029
 </pre>
 
-`LINK TO HOST:`
+`LINK TO HOST:` https://arcane-bayou-52642.herokuapp.com/
 
 `LINK TO REPORT:`
