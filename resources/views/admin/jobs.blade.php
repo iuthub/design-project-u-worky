@@ -12,7 +12,11 @@
             <form action="{{route('admin.addnewjob')}}" method="post" id="addJobForm">
                 @csrf
                 <div class="card-body">
-
+                    <?php 
+                        if(isset($error)){?>
+                            <h2 style="color:red;">Please fill all the blanks!</h2>
+                    <?php }
+                    ?>
                     <div class="row form-item">
                         <div class="col-xl-3 col-lg-3 form-item-title">
                             Job title

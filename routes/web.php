@@ -53,7 +53,11 @@ Route::group([
 
     Route::get('job/{id}',  [
         'uses' => 'MainController@getJob',
-        'as' => 'jobDetails'
+        'as' => 'jobDetails']);
+
+    Route::post('jobs/{id}',  [
+        'uses' => 'MainController@jobsByCategory',
+        'as' => 'jobsByCategory'
     ]);
 });
 

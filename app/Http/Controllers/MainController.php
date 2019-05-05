@@ -43,4 +43,10 @@ class MainController extends Controller {
         $jobs = $jobs->whereIn('id', $jobs_id)->get();
         return view('dashboard.jobs', ['jobs' => $jobs]);
     }
+
+    public function jobsByCategory($id){
+        $jobs = new Job();
+        $jobs = $jobs->where('category_id', '=', $request);
+        return view('dashboard.jobs', ['jobs' => $jobs]);
+    }
 }
