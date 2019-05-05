@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('navbar')
-    @include('partials.navbar', ['type' => 0])
+@include('partials.navbar', ['type' => 0])
 @endsection
 
 @section('content')
@@ -95,23 +95,36 @@
                             <!-- Name -->
                             <div class="md-form">
                                 <i class="fas fa-user prefix d-flex"></i>
-                                <input type="text" id="name" name="email" class="form-control" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input type="text" id="name" name="email" class="form-control
+                                    {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 <label for="name">Email</label>
+
+                                @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                                @endif
                             </div>
 
                             <!-- Password -->
                             <div class="md-form">
                                 <i class="fas fa-lock prefix d-flex"></i>
-                                <input type="password" id="password" name="password" required autocomplete="current-password" class="form-control">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                 <label for="password">Password</label>
+
+                                @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                                @endif
                             </div>
 
                             <div class="d-flex justify-content-around">
                                 <div>
                                     <div class="form-check">
-                                        <input type="checkbox" id="check-remember" name="check-member"
-                                            class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
-                                        <label class="form-check-label" for="check-remember">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="remember">
                                             {{ __('Remember Me') }}
                                         </label>
                                     </div>

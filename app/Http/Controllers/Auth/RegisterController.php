@@ -75,7 +75,7 @@ class RegisterController extends Controller
         ]);
         $user->save();
 
-        if($data['employer'])
+        if(isset($data['employer']))
             UserRole::create([
                 'user_id' => $user->id,
                 'role_id' => 2
