@@ -33,13 +33,10 @@ class MainController extends Controller {
 
     public function postJobs(Request $request){
         $data = $request->input();
-        $jobs_id = JobSkill::where('skill_id', $data['keyword'])->get();
-        $jobs = Job::where('category_id', $data['category']);
-        $arr = array();
-        foreach($jobs_id as $i){
-            array_push($arr, $jobs->first('id', $i->job_id));
-        }
-
-        return view('dashboard.jobs', ['jobs' => $arr]);
+        $jobs_id = JobSkill::where('skill_id', $data['keyword'])->pluck('job_id');
+        $jobs = new Job();
+        $jobs = $jobs->where('category_id', '=', $data['category']);
+        $jobs = $jobs->whereIn('id', $jobs_id)->get();
+        return view('dashboard.jobs', ['jobs' => $jobs]);
     }
 }

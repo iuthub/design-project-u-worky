@@ -85,10 +85,10 @@
                             <select class="mdb-select md-form colorful-select dropdown-primary" name="skill" id = "skill"
                                 searchable="Search here..." required>
                                 <option value="" disabled selected></option>
-                                <option value="1">HTML</option>
-                                <option value="2">CSS</option>
-                                <option value="3">JavaScript</option>
-                                <option value="4">PHP</option>
+                                <option value="1">PHP</option>
+                                <option value="2">HTML</option>
+                                <option value="3">CSS</option>
+                                <option value="4">JavaScript</option>
                             </select>
                         </div>
                     </div>
