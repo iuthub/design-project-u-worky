@@ -65,6 +65,11 @@ Route::group([
             'as' => 'admin.addnewjob'
         ]);
 
+        Route::get('edit', [
+            'uses' => 'AdminController@getEdit',
+            'as' => 'admin.edit'
+        ]);
+
         Route::get('', [
             'uses' => 'AdminController@getIndex',
             'as' => 'admin.main'
@@ -72,8 +77,4 @@ Route::group([
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-
 
