@@ -9,8 +9,7 @@
                     <div>
                         <img src="{{asset('frontend/img/logo.png')}}" alt="u-WORKY" />
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quibusdam assumenda sequi ducimus temporibus dolore, libero inventore dolorum error illo.
+                    <p>u-Worky has millions of jobs, salary information, company reviews, and interview questions – all posted by employees and job seekers.
                     </p>
                     <p>
                         <i class="fab fa-github pr-3 mb-2 blue-text"></i>
