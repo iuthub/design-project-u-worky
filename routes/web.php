@@ -11,9 +11,41 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard/index');
-})->name('home');
+
+
+// Route::get('/', function () {
+//     return view('dashboard/index');
+// })->name('home');
+
+
+// Route::get('/employers', function () {
+//     return view('dashboard/employers');
+// })->name('employers');
+
+Route::group([
+    'prefix' => '/'], function () {
+
+    Route::get('', [
+        'uses' => 'MainController@getIndex',
+        'as' => 'home'
+    ]);
+
+
+    Route::get('employers',  [
+        'uses' => 'MainController@getEmployers',
+        'as' => 'employers'
+    ]);
+
+    Route::get('candidates',  [
+        'uses' => 'MainController@getCandidates',
+        'as' => 'candidates'
+    ]);
+
+    Route::get('jobs',  [
+        'uses' => 'MainController@getJobs',
+        'as' => 'jobs'
+    ]);
+});
 
 
 Route::group([

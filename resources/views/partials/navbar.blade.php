@@ -25,19 +25,19 @@
                 <a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">Jobs</a>
                 <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item text-center" href="#">Job Categories</a>
-                    <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                    {{-- <a class="dropdown-item text-center" href="#">Job Categories</a> --}}
+                    <a class="dropdown-item text-center" href="{{route('jobs')}}">Search for job</a>
                     <a class="dropdown-item text-center" href="#">Find on Map</a>
                 </div>
             </li>
             <!-- /Dropdown -->
 
             <li class="nav-item my-auto">
-                <a class="nav-link" href="candidate-listing.html">Candidates</a>
+                <a class="nav-link" href="{{route('candidates')}}">Candidates</a>
             </li>
 
             <li class="nav-item my-auto">
-                <a class="nav-link" href="#">Employers</a>
+            <a class="nav-link" href="{{route('employers')}}">Employers</a>
             </li>
 
             <li class="nav-item my-auto">
