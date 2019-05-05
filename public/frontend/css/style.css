@@ -796,7 +796,7 @@ footer img {
 .dashboard .caret {
   color: rgba(0, 0, 0, 0.5) !important;
 }
-.dashboard .form-item .btn-publish-wrapper {
+.dashboard .form-item .btn-change-wrapper {
   display: flex;
   justify-content: flex-end;
 }
@@ -853,6 +853,16 @@ footer img {
 }
 .dashboard .card-user .user-info span {
   font-size: 16px;
+}
+.dashboard .edit-profile-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.dashboard .edit-profile-avatar {
+  border-radius: 10rem;
+  max-height: 128px;
+  max-width: 128px;
+
 }
 /* /Dashboard */
 
