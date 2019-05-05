@@ -29,4 +29,11 @@ class MainController extends Controller {
     public function getJobs() {
         return view('dashboard.jobs');
     }
+
+    public function findJobs(Request $request){
+        $data = $request->input();
+
+        
+
+    }
 }

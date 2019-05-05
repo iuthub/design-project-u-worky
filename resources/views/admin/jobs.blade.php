@@ -82,7 +82,7 @@
                             Required skills
                         </div>
                         <div class="col-xl-9 col-lg-9">
-                            <select class="mdb-select md-form colorful-select dropdown-primary" name="skills[]" multiple
+                            <select class="mdb-select md-form colorful-select dropdown-primary" name="skill" id = "skill"
                                 searchable="Search here..." required>
                                 <option value="" disabled selected></option>
                                 <option value="1">HTML</option>

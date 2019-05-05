@@ -1,7 +1,7 @@
 <form action="">
     <div class="row search-fields">
         <div class="search-field col-xl col-lg col-md-12">
-            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here...">
+            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here..." name = "keywords[]">
                 <option value="" disabled selected>Enter job title...</option>
                 <option value="1">PHP</option>
                 <option value="2">Android</option>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="search-field col-xl col-lg col-md-12">
-            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here...">
+            <select class="mdb-select md-form colorful-select dropdown-primary" multiple searchable="Search here..." name = "locations[]"">
                 <option value="" disabled selected>Enter location...</option>
                 <option value="1">Uzbekistan</option>
                 <option value="2">USA</option>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="search-field col-xl col-lg col-md-12">
-            <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here...">
+            <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "category">
                 <option value="" disabled selected>Enter category...</option>
                 <option value="1">IT &amp; Computer</option>
                 <option value="2">Finance &amp; Logistics</option>

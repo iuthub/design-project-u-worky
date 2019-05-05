@@ -31,14 +31,9 @@ class AdminController extends Controller
 
     public function postAddJob(Request $request){
         $data = $request->input();
-       // $skills = $data['skills'];
 
         //=============TESTING AREA===================//
-
-        // foreach($skills as $skill){
-        //     JobSkill::firstOrNew($skill)->modifyOrCreate($skill);
-        // }
-
+        
         //=============================================//
 
         $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
@@ -56,20 +51,24 @@ class AdminController extends Controller
             $location = ['name' => NULL, 'lat' => NULL, 'lng' => NULL];
             $data['location_id'] = NULL;
         }
+
+        $skill_id = $data['skill'];
+
+
         unset($data['lat']);
         unset($data['lng']);
         unset($data['location-name']);
         unset($data['_token']);
         unset($data['search']);
-        // unset($data['skills']);
+        unset($data['skill']);
         unset($data['salary_id_from']);
         unset($data['salary_id_to']);
 
         $data['employer_id'] = Auth::user()->id;
 
-       $job = Job::create($data);
-
-        // $job->addSkills($skills);
+        $job_id = $job = Job::create($data)->id;
+        $skill = ['job_id' => $job_id, 'skill_id' => $skill_id];
+        JobSkill::firstOrNew($skill)->modifyOrCreate($skill); 
 
         return redirect('/admin');
     }
