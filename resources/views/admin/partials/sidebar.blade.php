@@ -26,7 +26,7 @@
                             class=" ion-ios-compose pr-3"></i>
                         <span>ADD NEW JOB</span></a>
                 </li>
-                <li><a href="dashboard-all-jobs.html"  ><i
+                <li><a href="{{route('admin.alljobs')}}"  ><i
                             class=" ion-briefcase pr-3"></i>
                         <span>ALL JOBS</span></a>
                 </li>

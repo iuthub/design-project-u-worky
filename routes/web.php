@@ -79,6 +79,11 @@ Route::group([
             'as' => 'admin.edit'
         ]);
 
+        Route::get('alljobs', [
+            'uses' => 'AdminController@getAllJobs',
+            'as' => 'admin.alljobs'
+        ]);
+
         Route::get('', [
             'uses' => 'AdminController@getIndex',
             'as' => 'admin.main'

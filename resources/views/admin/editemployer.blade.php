@@ -15,7 +15,7 @@
 
                 <div class="row form-item">
                     <div class="col-xl-3 col-lg-3 form-item-title edit-profile-avatar-wrapper">
-                        <img src="img/employer-logo-turon.png" alt="" class="edit-profile-avatar img-fluid">
+                        <img src="{{asset('frontend/img/employer-logo-turon.png')}}" alt="" class="edit-profile-avatar img-fluid">
                     </div>
                     <div class="col-xl-9 col-lg-9">
                         <div class="md-form">
@@ -171,4 +171,12 @@
 
 @section('footer')
 @include('admin.partials.footer')
+@endsection
+
+@section('scripts')
+    <script type="text/javascript" src="{{asset('frontend/js/vendor/tinymce/tinymce.min.js')}}"></script>
+    <script>
+        // TinyMCE Initialization
+        tinymce.init({ selector:'#company-details', menubar: false, height : "300" });
+    </script>
 @endsection

@@ -33,21 +33,25 @@ class AdminController extends Controller
         return view('admin.editemployer');
     }
 
+    public function getAllJobs() {
+        return view('admin.alljobs');
+    }
+
     public function postAddJob(Request $request){
         $data = $request->input();
 
         //=============TESTING AREA===================//
-        
+
         //=============================================//
 
-  
+
 
         $error = !isset($data['name']) || !isset($data['description'])|| !isset($data['category_id']) || !isset($data['type']) || !isset($data['skill']) || !isset($data['salary_id_to']) || !isset($data['salary_id_from']) || !isset($data['deadline']);
 
         if($error){
             return view('admin.jobs', ['error' => true]);
         }else{
-        
+
             $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
 
             $data['salary_id'] = Salary::firstOrNew($salary)->modifyOrCreate($salary)->id;
@@ -80,7 +84,7 @@ class AdminController extends Controller
 
         $job_id = $job = Job::create($data)->id;
         $skill = ['job_id' => $job_id, 'skill_id' => $skill_id];
-        JobSkill::firstOrNew($skill)->modifyOrCreate($skill); 
+        JobSkill::firstOrNew($skill)->modifyOrCreate($skill);
 
         return redirect('/admin');
 

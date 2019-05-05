@@ -11,7 +11,7 @@
             </select>
             <label>Keywords?</label>
         </div>
-
+{{--
         <div class="search-field col-xl col-lg col-md-12">
             <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "location">
                 <option value="" disabled selected>Enter location...</option>
@@ -21,7 +21,7 @@
                 <option value="4">Japan</option>
             </select>
             <label>Where?</label>
-        </div>
+        </div> --}}
 
         <div class="search-field col-xl col-lg col-md-12">
             <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..." name = "category">
