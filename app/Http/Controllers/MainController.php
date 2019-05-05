@@ -31,6 +31,7 @@ class MainController extends Controller {
     }
 
     public function postJobs(Request $request){
-        return redirect("");
+        $data = $request->input();
+        return view('dashboard.jobs');
     }
 }
