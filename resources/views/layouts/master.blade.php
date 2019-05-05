@@ -33,7 +33,7 @@
     </header>
 
     <!--Main Layout-->
-    <main class="text-center">
+    <main>
         @yield('content')
     </main>
     <!--Main Layout-->

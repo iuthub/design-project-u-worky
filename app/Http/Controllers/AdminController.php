@@ -9,9 +9,14 @@ use App\Http\Models\Job\Salary;
 use App\Http\Models\User\Profession;
 use App\Http\Models\User\Skill;
 use App\Http\Models\User\User;
+use App\Http\Models\Location;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+
+
+use App\Http\Models\Job\Relations\JobSkill;
+
 
 class AdminController extends Controller
 {
@@ -28,6 +33,14 @@ class AdminController extends Controller
         $data = $request->input();
        // $skills = $data['skills'];
 
+        //=============TESTING AREA===================//
+
+        // foreach($skills as $skill){
+        //     JobSkill::firstOrNew($skill)->modifyOrCreate($skill);
+        // }
+
+        //=============================================//
+
         $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
 
         $data['salary_id'] = Salary::firstOrNew($salary)->modifyOrCreate($salary)->id;
@@ -35,14 +48,26 @@ class AdminController extends Controller
         $data['deadline'] = DateTime::createFromFormat("d M, Y", $data['deadline'])->getTimestamp();
         $data['is_featured'] = isset($data['is_featured']) ? 1 : 0;
 
+        if(isset($data['location-name'])){
+            $location = ['name' => $data['location-name'], 'lat' => $data['lat'], 'lng' => $data['lng']];
+            $data['location_id'] = Location::firstOrNew($location)->modifyOrCreate($location)->id;
+
+        }else{
+            $location = ['name' => NULL, 'lat' => NULL, 'lng' => NULL];
+            $data['location_id'] = NULL;
+        }
+        unset($data['lat']);
+        unset($data['lng']);
+        unset($data['location-name']);
         unset($data['_token']);
-        unset($data['skills']);
+        unset($data['search']);
+        // unset($data['skills']);
         unset($data['salary_id_from']);
         unset($data['salary_id_to']);
 
         $data['employer_id'] = Auth::user()->id;
 
-        $job = Job::create($data);
+       $job = Job::create($data);
 
         // $job->addSkills($skills);
 
