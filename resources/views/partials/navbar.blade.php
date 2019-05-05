@@ -20,6 +20,7 @@
                 </a>
             </li>
 
+            @if(Auth::check())
             <!-- Dropdown -->
             <li class="nav-item dropdown my-auto">
                 <a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -35,15 +36,33 @@
             <li class="nav-item my-auto">
                 <a class="nav-link" href="{{route('candidates')}}">Candidates</a>
             </li>
+            @endif
 
             <li class="nav-item my-auto">
-            <a class="nav-link" href="{{route('employers')}}">Employers</a>
+                <a class="nav-link" href="{{route('employers')}}">Employers</a>
             </li>
 
             <li class="nav-item my-auto">
                 <a class="nav-link" href="#">Contact us</a>
             </li>
 
+            @if(Auth::check())
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user pr-2"></i>Profile
+                </a>
+                <div class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="{{route('home')}}">Home</a>
+                    <a class="dropdown-item" href="{{route('admin.main')}}">Dashboard</a>
+                    <form action="{{route('logout')}}" method="POST" class="w-auto">
+                        <input class="dropdown-item" type="submit" value="Log Out">
+                        @csrf
+                    </form>
+                    {{-- <a class="dropdown-item" onclick="logout();">Log Out</a> --}}
+                </div>
+            </li>
+            @else
             <li>
                 <form class="form-inline">
                     <div class="md-form container-fluid my-auto">
@@ -56,6 +75,7 @@
                     </div>
                 </form>
             </li>
+            @endif
         </ul>
         <!-- /Links -->
     </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Models\Job\Category;
 use App\Http\Models\Job\Job;
+use App\Http\Models\User\User;
 
 class MainController extends Controller {
     //

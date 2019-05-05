@@ -117,8 +117,9 @@ Main
                                                                 class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
                                                             <i
                                                                 class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
-                                                            - $2,000<br>
+                                                            <i
+                                                                class="fas fa-money-bill pr-3 mb-1 green-text"></i>UZS{{$item->salary()->from}}
+                                                            - UZS{{$item->salary()->to}}<br>
                                                         </p>
                                                     </div>
                                                     <!-- /Card content -->
@@ -177,8 +178,9 @@ Main
                                                                 class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
                                                             <i
                                                                 class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
-                                                            - $2,000<br>
+                                                            <i
+                                                                class="fas fa-money-bill pr-3 mb-1 green-text"></i>UZS{{$item->salary()->from}}
+                                                            - UZS{{$item->salary()->to}}<br>
                                                         </p>
                                                     </div>
                                                     <!-- /Card content -->
@@ -222,7 +224,6 @@ Main
             </div>
 
             <div class="row">
-
                 <div class="col-12 col-md-4">
                     <div class="card">
                         <a href="">
@@ -384,8 +385,11 @@ Main
                             quidem sequi nostrum illum rerum, nulla recusandae?</p>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-lg btn-rounded btn-primary"><i class="fas fa-user pr-4"
-                                aria-hidden="true"></i>Register as employer</button>
+                        <a href="{{route('register')}}">
+                            <button type="button" class="btn btn-lg btn-rounded btn-primary"><i class="fas fa-user pr-4"
+                                    aria-hidden="true"></i>Register as employer</button>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -404,8 +408,10 @@ Main
                             quidem sequi nostrum illum rerum, nulla recusandae?</p>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-lg btn-rounded btn-white-border blue-text"><i
-                                class="fas fa-user pr-4" aria-hidden="true"></i>Register as candidate</button>
+                        <a href="{{route('register')}}">
+                            <button type="button" class="btn btn-lg btn-rounded btn-white-border blue-text"><i
+                                    class="fas fa-user pr-4" aria-hidden="true"></i>Register as candidate</button>
+                        </a>
                     </div>
                 </div>
             </div>
