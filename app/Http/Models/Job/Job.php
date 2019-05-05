@@ -9,6 +9,7 @@ use App\Http\Models\Job\Relations\JobProfession;
 use App\Http\Models\Job\Relations\JobSkill;
 use App\Http\Models\Job\Relations\JobUser;
 use App\Http\Models\User\User;
+use App\Http\Models\Location;
 use Illuminate\Support\Facades\Cache;
 
 /**
@@ -160,5 +161,13 @@ class Job extends CustomModel
         Cache::add($type, $data, config('items.date')['day']);
 
         return $data;
+    }
+
+    public function employer() {
+        return User::find($this->employer_id);
+    }
+
+    public function location() {
+        return Location::find($this->location_id);
     }
 }

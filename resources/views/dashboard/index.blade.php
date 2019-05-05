@@ -104,11 +104,9 @@ Main
 
                                                             <p>
                                                                 <i
-                                                                    class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco
-                                                                Telecom<br>
+                                                                    class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
                                                                 <i
-                                                                    class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                                Mustakillik str. 5/1<br>
+                                                                    class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
                                                                 <i
                                                                     class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
                                                                 - $2,000<br>
