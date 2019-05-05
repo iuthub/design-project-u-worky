@@ -80,95 +80,19 @@ Main
                             <div class="col-12">
 
                                 <div class="row">
-                                    @foreach ($recent_jobs as $item) <!-- Card -->
-                                        <div class="col-lg-6 col-md-6 job">
-                                            <div class="card">
-                                                <div class="row">
-                                                    <!-- Card image -->
-                                                    <div class="col-4 card-image-wrapper">
-                                                        <div class="card-image">
-                                                            <img src="{{asset('frontend/img/employer-logo-netco.png')}}"
-                                                                class="img-fluid" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <!--Card image -->
-
-                                                    <div class="col-8">
-                                                        <!-- Card content -->
-                                                        <div class="card-body">
-                                                            <!-- Category & Title -->
-                                                            <h5 class="card-title"><strong><a href="">{{$item->name}}</a></strong></h5>
-                                                            <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                    TIME</a></span>
-                                                            <!-- /Category & Title -->
-
-                                                            <p>
-                                                                <i
-                                                                    class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
-                                                                <i
-                                                                    class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
-                                                                <i
-                                                                    class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
-                                                                - $2,000<br>
-                                                            </p>
-                                                        </div>
-                                                        <!-- /Card content -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Card -->
-                                        @endforeach
-
-
-                                        <!-- Card -->
-                                        <div class="col-lg-6 col-md-6 job">
-                                            <div class="card">
-                                                <div class="row">
-                                                    <!-- Card image -->
-                                                    <div class="col-4 card-image-wrapper">
-                                                        <div class="card-image">
-                                                            <img src="{{asset('frontend/img/employer-logo-netco.png')}}"
-                                                                class="img-fluid" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <!--Card image -->
-
-                                                    <div class="col-8">
-                                                        <!-- Card content -->
-                                                        <div class="card-body">
-                                                            <!-- Category & Title -->
-                                                            <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                        Developer</a></strong></h5>
-                                                            <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                    TIME</a></span>
-                                                            <!-- /Category & Title -->
-
-                                                            <p>
-                                                                <i
-                                                                    class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco
-                                                                Telecom<br>
-                                                                <i
-                                                                    class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                                Mustakillik str. 5/1<br>
-                                                                <i
-                                                                    class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
-                                                                - $2,000<br>
-                                                            </p>
-                                                        </div>
-                                                        <!-- /Card content -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- /Card -->
-                                </div>
-
-                                <div class="row">
+                                    @foreach ($recent_jobs as $item)
                                     <!-- Card -->
+                                    @if($loop->index > 5) @break @endif
                                     <div class="col-lg-6 col-md-6 job">
                                         <div class="card">
                                             <div class="row">
+                                                @if($item->is_featured)
+                                                <!-- Featured -->
+                                                <div><img src="{{asset('frontend/img/job-featured.png')}}" alt=""
+                                                        class="featured-icon"></div>
+                                                <!-- /Featured -->
+                                                @endif
+
                                                 <!-- Card image -->
                                                 <div class="col-4 card-image-wrapper">
                                                     <div class="card-image">
@@ -182,18 +106,17 @@ Main
                                                     <!-- Card content -->
                                                     <div class="card-body">
                                                         <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
+                                                        <h5 class="card-title"><strong><a
+                                                                    href="">{{$item->name}}</a></strong></h5>
+                                                        <span class="badge badge-pill pink"><a
+                                                                href="#">{{$item->type()}}</a></span>
                                                         <!-- /Category & Title -->
 
                                                         <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco
-                                                            Telecom<br>
                                                             <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
+                                                                class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
+                                                            <i
+                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
                                                             <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
                                                             - $2,000<br>
                                                         </p>
@@ -204,48 +127,8 @@ Main
                                         </div>
                                     </div>
                                     <!-- /Card -->
-
-                                    <!-- Card -->
-                                    <div class="col-lg-6 col-md-6 job">
-                                        <div class="card">
-                                            <div class="row">
-                                                <!-- Card image -->
-                                                <div class="col-4 card-image-wrapper">
-                                                    <div class="card-image">
-                                                        <img src="{{asset('frontend/img/employer-logo-netco.png')}}"
-                                                            class="img-fluid" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--Card image -->
-
-                                                <div class="col-8">
-                                                    <!-- Card content -->
-                                                    <div class="card-body">
-                                                        <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
-                                                        <!-- /Category & Title -->
-
-                                                        <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco
-                                                            Telecom<br>
-                                                            <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
-                                                            - $2,000<br>
-                                                        </p>
-                                                    </div>
-                                                    <!-- /Card content -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /Card -->
+                                    @endforeach
                                 </div>
-
                             </div>
                         </div>
 
@@ -259,11 +142,12 @@ Main
                             <div class="col-12">
 
                                 <div class="row">
+                                    @foreach ($featured_jobs as $item)
                                     <!-- Card -->
+                                    @if($loop->index > 5) @break @endif
                                     <div class="col-lg-6 col-md-6 job">
                                         <div class="card">
                                             <div class="row">
-
                                                 <!-- Featured -->
                                                 <div><img src="{{asset('frontend/img/job-featured.png')}}" alt=""
                                                         class="featured-icon"></div>
@@ -272,7 +156,7 @@ Main
                                                 <!-- Card image -->
                                                 <div class="col-4 card-image-wrapper">
                                                     <div class="card-image">
-                                                        <img src="{{asset('frontend/img/employer-logo-turon.png')}}"
+                                                        <img src="{{asset('frontend/img/employer-logo-netco.png')}}"
                                                             class="img-fluid" alt="">
                                                     </div>
                                                 </div>
@@ -282,20 +166,19 @@ Main
                                                     <!-- Card content -->
                                                     <div class="card-body">
                                                         <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
+                                                        <h5 class="card-title"><strong><a
+                                                                    href="">{{$item->name}}</a></strong></h5>
+                                                        <span class="badge badge-pill pink"><a
+                                                                href="#">{{$item->type()}}</a></span>
                                                         <!-- /Category & Title -->
 
                                                         <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon
-                                                            Telecom<br>
                                                             <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000
-                                                            - $2,300<br>
+                                                                class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
+                                                            <i
+                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
+                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500
+                                                            - $2,000<br>
                                                         </p>
                                                     </div>
                                                     <!-- /Card content -->
@@ -304,146 +187,7 @@ Main
                                         </div>
                                     </div>
                                     <!-- /Card -->
-
-                                    <!-- Card -->
-                                    <div class="col-lg-6 col-md-6 job">
-                                        <div class="card">
-                                            <div class="row">
-
-                                                <!-- Featured -->
-                                                <div><img src="{{asset('frontend/img/job-featured.png')}}" alt=""
-                                                        class="featured-icon"></div>
-                                                <!-- /Featured -->
-
-                                                <!-- Card image -->
-                                                <div class="col-4 card-image-wrapper">
-                                                    <div class="card-image">
-                                                        <img src="{{asset('frontend/img/employer-logo-turon.png')}}"
-                                                            class="img-fluid" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--Card image -->
-
-                                                <div class="col-8">
-                                                    <!-- Card content -->
-                                                    <div class="card-body">
-                                                        <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
-                                                        <!-- /Category & Title -->
-
-                                                        <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon
-                                                            Telecom<br>
-                                                            <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000
-                                                            - $2,300<br>
-                                                        </p>
-                                                    </div>
-                                                    <!-- /Card content -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /Card -->
-                                </div>
-
-                                <div class="row">
-                                    <!-- Card -->
-                                    <div class="col-lg-6 col-md-6 job">
-                                        <div class="card">
-                                            <div class="row">
-
-                                                <!-- Featured -->
-                                                <div><img src="{{asset('frontend/img/job-featured.png')}}" alt=""
-                                                        class="featured-icon"></div>
-                                                <!-- /Featured -->
-
-                                                <!-- Card image -->
-                                                <div class="col-4 card-image-wrapper">
-                                                    <div class="card-image">
-                                                        <img src="{{asset('frontend/img/employer-logo-turon.png')}}"
-                                                            class="img-fluid" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--Card image -->
-
-                                                <div class="col-8">
-                                                    <!-- Card content -->
-                                                    <div class="card-body">
-                                                        <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
-                                                        <!-- /Category & Title -->
-
-                                                        <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon
-                                                            Telecom<br>
-                                                            <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000
-                                                            - $2,300<br>
-                                                        </p>
-                                                    </div>
-                                                    <!-- /Card content -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /Card -->
-
-                                    <!-- Card -->
-                                    <div class="col-lg-6 col-md-6 job">
-                                        <div class="card">
-                                            <div class="row">
-
-                                                <!-- Featured -->
-                                                <div><img src="{{asset('frontend/img/job-featured.png')}}" alt=""
-                                                        class="featured-icon"></div>
-                                                <!-- /Featured -->
-
-                                                <!-- Card image -->
-                                                <div class="col-4 card-image-wrapper">
-                                                    <div class="card-image">
-                                                        <img src="{{asset('frontend/img/employer-logo-turon.png')}}"
-                                                            class="img-fluid" alt="">
-                                                    </div>
-                                                </div>
-                                                <!--Card image -->
-
-                                                <div class="col-8">
-                                                    <!-- Card content -->
-                                                    <div class="card-body">
-                                                        <!-- Category & Title -->
-                                                        <h5 class="card-title"><strong><a href="">Senior PHP Web
-                                                                    Developer</a></strong></h5>
-                                                        <span class="badge badge-pill pink"><a href="#">FULL -
-                                                                TIME</a></span>
-                                                        <!-- /Category & Title -->
-
-                                                        <p>
-                                                            <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Turon
-                                                            Telecom<br>
-                                                            <i
-                                                                class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent,
-                                                            Mustakillik str. 5/1<br>
-                                                            <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$2,000
-                                                            - $2,300<br>
-                                                        </p>
-                                                    </div>
-                                                    <!-- /Card content -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /Card -->
+                                    @endforeach
                                 </div>
 
                             </div>

@@ -14,7 +14,7 @@ class MainController extends Controller {
         $categories = Category::all();
         $recent_jobs = Job::orderBy('created_at', 'desc')->get();
         $featured_jobs = Job::where('is_featured', 1)->get();
-        return view('dashboard.index', ['categories' => $categories], ['recent_jobs' => $recent_jobs], ['featured_jobs' => $featured_jobs]);
+        return view('dashboard.index', ['categories' => $categories, 'recent_jobs' => $recent_jobs, 'featured_jobs' => $featured_jobs]);
     }
 
     public function getEmployers() {

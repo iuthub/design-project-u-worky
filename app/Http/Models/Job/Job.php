@@ -8,6 +8,7 @@ use App\Http\Models\CustomModel;
 use App\Http\Models\Job\Relations\JobProfession;
 use App\Http\Models\Job\Relations\JobSkill;
 use App\Http\Models\Job\Relations\JobUser;
+use App\Http\Models\Job\Salary;
 use App\Http\Models\User\User;
 use App\Http\Models\Location;
 use Illuminate\Support\Facades\Cache;
@@ -163,11 +164,21 @@ class Job extends CustomModel
         return $data;
     }
 
+    public function type() {
+        return 'Full-Time';
+    }
+
     public function employer() {
         return User::find($this->employer_id);
     }
 
     public function location() {
-        return Location::find($this->location_id);
+
+        return isset($this->location_id) ? Location::find($this->location_id) : new Location(['name' => 'some address']);
     }
+
+    public function salary() {
+        return Salary::find($this->salary_id);
+    }
+
 }
