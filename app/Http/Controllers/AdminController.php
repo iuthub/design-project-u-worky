@@ -29,6 +29,10 @@ class AdminController extends Controller
         return view('admin.main');
     }
 
+    public function getEdit() {
+        return view('admin.editemployer');
+    }
+
     public function postAddJob(Request $request){
         $data = $request->input();
        // $skills = $data['skills'];
