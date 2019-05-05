@@ -128,8 +128,7 @@ class Job extends CustomModel
         }
     }
 
-    public function remove()
-    {
+    public function remove() {
         $this->relCategory->decrement('count');
 
         JobSkill::where('job_id', $this->id)->forceDelete();
@@ -138,34 +137,25 @@ class Job extends CustomModel
         $this->forceDelete();
     }
 
-    public function whereFeatured()
-    {
+    public function whereFeatured() {
         return $this->wherePublished()->where('is_featured', '=', 1);
     }
 
-    public function wherePublished()
-    {
+    public function wherePublished() {
         return $this->where('status', '=', 1);
     }
 
-    public function setCache($type)
-    {
-        switch ($type) {
-            case config('cache_items.index_recent_jobs'):
-                $data = $this->wherePublished()->with(self::RELATION_LIST)->orderBy('id', 'DESC')->take(config('items.index_job_count'))->get();
-                break;
-            case config('cache_items.index_featured_jobs'):
-                $data = $this->whereFeatured()->with(self::RELATION_LIST)->orderBy('id', 'DESC')->take(config('items.index_job_count'))->get();
-                break;
-        }
-
-        Cache::add($type, $data, config('items.date')['day']);
-
-        return $data;
-    }
-
     public function type() {
-        return 'Full-Time';
+        switch($this->type) {
+            case 'full_time':
+                return 'Full-Time';
+            case 'part_time':
+                return 'Part-Time';
+            case 'contract':
+                return 'Contract';
+            case 'internship':
+                return 'Internship';
+        }
     }
 
     public function employer() {

@@ -3,6 +3,7 @@
 namespace App\Http\Models\User;
 
 use App\Http\Models\Image;
+use App\Http\Models\Location;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -189,4 +190,10 @@ class User extends Authenticatable
 
         return $sum;
     }
+
+    public function location() {
+
+        return isset($this->location_id) ? Location::find($this->location_id) : new Location(['name' => 'some address']);
+    }
+
 }

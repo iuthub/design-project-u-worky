@@ -241,7 +241,7 @@ Jobs
     </div>
 
 
-    <div class="row justify-content-center align-items-center my-4">
+    {{-- <div class="row justify-content-center align-items-center my-4">
         <nav aria-label="Page navigation">
             <ul class="pagination pagination-circle pg-blue m-0">
                 <li class="page-item disabled"><a class="page-link">First</a></li>
@@ -267,7 +267,7 @@ Jobs
         </nav>
 
 
-    </div>
+    </div> --}}
 </div>
 @endsection
 
@@ -275,4 +275,20 @@ Jobs
 
 @section('footer')
 @include('partials.footer')
+@endsection
+
+
+@section('scripts')
+<script>
+    function toggleSearch(){
+        var extSearch = $("#extSearch");
+        if(extSearch.hasClass('d-none')){
+          $('#extSearch').removeClass('d-none');
+          $('#extSearch').addClass('d-block');
+        } else {
+          $('#extSearch').removeClass('d-block');
+          $('#extSearch').addClass('d-none');
+        }
+      }
+</script>
 @endsection
