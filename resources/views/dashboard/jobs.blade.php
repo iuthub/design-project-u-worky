@@ -9,7 +9,11 @@
 @endsection
 
 @section('poster')
-{{-- @include('dashboard.poster') --}}
+@include('dashboard.jobsposter')
+@endsection
+
+@section('content')
+
 @endsection
 
 

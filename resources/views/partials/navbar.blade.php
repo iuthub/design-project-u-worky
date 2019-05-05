@@ -20,7 +20,7 @@
                 </a>
             </li>
 
-            @if(Auth::check())
+
             <!-- Dropdown -->
             <li class="nav-item dropdown my-auto">
                 <a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -33,6 +33,8 @@
             </li>
             <!-- /Dropdown -->
 
+
+            @if(Auth::check())
             <li class="nav-item my-auto">
                 <a class="nav-link" href="{{route('candidates')}}">Candidates</a>
             </li>
