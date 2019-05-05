@@ -11,7 +11,9 @@ use App\Http\Models\Job\Relations\JobUser;
 use App\Http\Models\Job\Salary;
 use App\Http\Models\User\User;
 use App\Http\Models\Location;
+use App\Http\Models\Image;
 use Illuminate\Support\Facades\Cache;
+
 
 /**
  * Class Job
@@ -163,7 +165,6 @@ class Job extends CustomModel
     }
 
     public function location() {
-
         return isset($this->location_id) ? Location::find($this->location_id) : new Location(['name' => 'some address']);
     }
 
@@ -171,4 +172,8 @@ class Job extends CustomModel
         return Salary::find($this->salary_id);
     }
 
+    public function photo() {
+        $image_id = $this->employer()->image_id;
+        return isset($image_id) ? Image::find($image_id)->name : 'employer-logo-netco.png';
+    }
 }
