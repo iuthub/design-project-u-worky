@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Models\Job\Category;
+use App\Http\Models\Job\Job;
+
 class MainController extends Controller {
     //
 
     public function getIndex() {
-        return view('dashboard.index');
+        $categories = Category::all();
+        $recent_jobs = Job::orderBy('created_at', 'desc')->get();
+        $featured_jobs = Job::where('is_featured', 1)->get();
+        return view('dashboard.index', ['categories' => $categories], ['recent_jobs' => $recent_jobs], ['featured_jobs' => $featured_jobs]);
     }
 
     public function getEmployers() {

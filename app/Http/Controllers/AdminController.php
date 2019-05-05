@@ -26,14 +26,14 @@ class AdminController extends Controller
 
     public function postAddJob(Request $request){
         $data = $request->input();
-        $skills = $data['skills'];
+       // $skills = $data['skills'];
 
         $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
 
         $data['salary_id'] = Salary::firstOrNew($salary)->modifyOrCreate($salary)->id;
         $data['created_at'] = time();
         $data['deadline'] = DateTime::createFromFormat("d M, Y", $data['deadline'])->getTimestamp();
-        $data['is_featured'] = $data['is_featured'] === "on" ? 1 : 0;
+        $data['is_featured'] = isset($data['is_featured']) ? 1 : 0;
 
         unset($data['_token']);
         unset($data['skills']);
