@@ -151,7 +151,7 @@
 
 
                     <div class="row form-item">
-                        <div class="col-12 btn-publish-wrapper">
+                        <div class="col-12 btn-change-wrapper">
                             <button type="button" class="btn-publish btn btn-primary btn-rounded" id="publishBtn"><i
                                     class="ion-android-send pr-2" aria-hidden="true"></i>Publish</button>
                         </div>

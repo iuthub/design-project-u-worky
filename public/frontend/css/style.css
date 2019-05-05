@@ -350,29 +350,37 @@ footer.page-footer {
   height: 42px;
   left: -1px;
 }
-.job, .candidate {
+.job, .candidate, .employer {
   margin-bottom: 32px;
 }
 .job .card,
-.candidate .card {
+.candidate .card,
+.employer .card {
   transition: all 0.5s cubic-bezier(0.15, 0.8, 0.15, 1);
 }
+/* .employer .card {
+  margin-top: 16px;
+} */
 .job .card:hover, 
-.candidate .card:hover {
+.candidate .card:hover,
+.employer .card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(1.01);
 }
 .job .card .card-image-wrapper, 
-.candidate .card .card-image-wrapper {
+.candidate .card .card-image-wrapper,
+.employer .card .card-image-wrapper {
   display: flex;
   justify-content: center;
   margin: auto;
 }
 .job .card .card-image-wrapper .card-image,
-.candidate .card .card-image-wrapper .card-image {
+.candidate .card .card-image-wrapper .card-image,
+.employer .card .card-image-wrapper .card-image {
   margin-left: 16px;
 } 
-.job .card-body p {
+.job .card-body p,
+.employer .card-body p {
   margin: 0;
 }
 .badge {
@@ -382,11 +390,17 @@ footer.page-footer {
 .badge a:hover {
   color: white;
 }
-.candidate .card .card-image img {
+.candidate .card .card-image img,
+.employer .card .card-image img {
   border-radius: 10rem;
 }
-.candidate .card .card-subtitle {
+.candidate .card .card-subtitle,
+.employer .card .card-subtitle {
   margin-bottom: 8px;
+}
+.employer .card .card-title,
+.employer .card .card-subtitle {
+  text-align: center;
 }
 @media (max-width: 576px) {
   .candidate .card .card-image img {
@@ -639,6 +653,11 @@ footer img {
   background-image: url("../img/candidate-suggestion-bg-dark.jpg");
 }
 
+.poster-employers-listing {
+  background-image: url("../img/employers2-bg-dark.jpg");
+  margin-bottom: 24px;
+}
+
 
 
 
@@ -865,22 +884,6 @@ footer img {
 
 }
 /* /Dashboard */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
