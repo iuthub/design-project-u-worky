@@ -40,12 +40,20 @@ class AdminController extends Controller
         
         //=============================================//
 
-        $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
+  
 
-        $data['salary_id'] = Salary::firstOrNew($salary)->modifyOrCreate($salary)->id;
-        $data['created_at'] = time();
-        $data['deadline'] = DateTime::createFromFormat("d M, Y", $data['deadline'])->getTimestamp();
-        $data['is_featured'] = isset($data['is_featured']) ? 1 : 0;
+        $error = !isset($data['name']) || !isset($data['description'])|| !isset($data['category_id']) || !isset($data['type']) || !isset($data['skill']) || !isset($data['salary_id_to']) || !isset($data['salary_id_from']) || !isset($data['deadline']);
+
+        if($error){
+            return view('admin.jobs', ['error' => true]);
+        }else{
+        
+            $salary = ['from' => $data['salary_id_from'], 'to' => $data['salary_id_to']];
+
+            $data['salary_id'] = Salary::firstOrNew($salary)->modifyOrCreate($salary)->id;
+            $data['created_at'] = time();
+            $data['deadline'] = DateTime::createFromFormat("d M, Y", $data['deadline'])->getTimestamp();
+            $data['is_featured'] = isset($data['is_featured']) ? 1 : 0;
 
         if(isset($data['location-name'])){
             $location = ['name' => $data['location-name'], 'lat' => $data['lat'], 'lng' => $data['lng']];
@@ -75,5 +83,7 @@ class AdminController extends Controller
         JobSkill::firstOrNew($skill)->modifyOrCreate($skill); 
 
         return redirect('/admin');
+
+        }
     }
 }
