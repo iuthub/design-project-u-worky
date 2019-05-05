@@ -1257,3 +1257,55 @@ footer img {
   top: 2px;
 }
 /* /Job Details */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Employer Details */
+.poster-employer-details {
+  background-image: url("../img/employer-parallax.png");
+}
+.employer-info-top {
+  background-image: none;
+  background-color: white;
+  border-radius: 1rem;
+  margin: -180px 16px 0 16px !important;
+}
+.employer-info-top .employer-title-wrapper {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.employer-info-top .employer-title-wrapper h3.employer-title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 40px;  
+  color: #397ec9;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+.employer-info-top .employer-title-wrapper .employer-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  color: #777777;
+  margin-left: 16px;
+}
+.company-detail p {
+  text-align: justify;
+}
+/* /Employer Details */
