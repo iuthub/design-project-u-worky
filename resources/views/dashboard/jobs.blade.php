@@ -168,6 +168,8 @@ Jobs
 
 
             <div class="row">
+                @if(isset($jobs))
+                @foreach ($jobs as $item)
                 <!-- Card -->
                 <div class="col-lg-6 col-md-6 job">
                     <div class="card">
@@ -175,7 +177,7 @@ Jobs
                             <!-- Card image -->
                             <div class="col-4 card-image-wrapper">
                                 <div class="card-image">
-                                    <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
+                                    <img src="{{asset('frontend/img/'.$item->photo())}}" class="img-fluid" alt="">
                                 </div>
                             </div>
                             <!--Card image -->
@@ -184,15 +186,15 @@ Jobs
                                 <!-- Card content -->
                                 <div class="card-body">
                                     <!-- Category & Title -->
-                                    <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
-                                    <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
+                                    <h5 class="card-title"><strong><a href="">{{$item->name}}</a></strong></h5>
+                                    <span class="badge badge-pill pink"><a href="#">{{$item->type()}}</a></span>
                                     <!-- /Category & Title -->
 
                                     <p>
-                                        <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
-                                        <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik
-                                        str. 5/1<br>
-                                        <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
+                                        <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>{{$item->employer()->name}}<br>
+                                        <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>{{$item->location()->name}}<br>
+                                        <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>UZS{{$item->salary()->from}}
+                                        - UZS{{$item->salary()->to}}<br>
                                     </p>
                                 </div>
                                 <!-- /Card content -->
@@ -201,42 +203,9 @@ Jobs
                     </div>
                 </div>
                 <!-- /Card -->
-
-                <!-- Card -->
-                <div class="col-lg-6 col-md-6 job">
-                    <div class="card">
-                        <div class="row">
-                            <!-- Card image -->
-                            <div class="col-4 card-image-wrapper">
-                                <div class="card-image">
-                                    <img src="img/employer-logo-netco.png" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <!--Card image -->
-
-                            <div class="col-8">
-                                <!-- Card content -->
-                                <div class="card-body">
-                                    <!-- Category & Title -->
-                                    <h5 class="card-title"><strong><a href="">Senior PHP Web Developer</a></strong></h5>
-                                    <span class="badge badge-pill pink"><a href="#">FULL - TIME</a></span>
-                                    <!-- /Category & Title -->
-
-                                    <p>
-                                        <i class="fa fas fa-suitcase pr-3 mb-1 blue-text"></i>Netco Telecom<br>
-                                        <i class="fas fa-map-marker-alt pr-3 mb-1 red-text"></i>Tashkent, Mustakillik
-                                        str. 5/1<br>
-                                        <i class="fas fa-money-bill pr-3 mb-1 green-text"></i>$1,500 - $2,000<br>
-                                    </p>
-                                </div>
-                                <!-- /Card content -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Card -->
+                @endforeach
+                @endif
             </div>
-
         </div>
     </div>
 
