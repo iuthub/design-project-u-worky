@@ -105,6 +105,9 @@ footer.page-footer {
 .poster-full {
   height: 100vh;
 }
+.poster-lg {
+  min-height: 70vh;
+}
 .poster-md {
   min-height: 60vh;
 }
@@ -881,11 +884,11 @@ footer img {
   border-radius: 10rem;
   max-height: 128px;
   max-width: 128px;
-
+}
+.dashboard #map {
+  height: 360px;
 }
 /* /Dashboard */
-
-
 
 
 
