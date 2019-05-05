@@ -31,6 +31,10 @@ class MainController extends Controller {
         return view('dashboard.jobs');
     }
 
+    public function getJob($id) {
+        return view('dashboard.job_details', ['job' => Job::find($id)]);
+    }
+
     public function postJobs(Request $request){
         $data = $request->input();
         $jobs_id = JobSkill::where('skill_id', $data['keyword'])->pluck('job_id');

@@ -50,6 +50,11 @@ Route::group([
         'uses' => 'MainController@postJobs',
         'as' => 'jobs'
     ]);
+
+    Route::get('job/{id}',  [
+        'uses' => 'MainController@getJob',
+        'as' => 'jobDetails'
+    ]);
 });
 
 

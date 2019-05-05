@@ -32,21 +32,23 @@ Main
             <div class="row categories">
 
                 @foreach ($categories as $item)
-                <div class="col-xl col-lg-6 col-md-6 col-12">
-                    <div class="item-category">
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="text-white text-center card-content">
-                                <h1><i class="{{$item->icon}}"></i></h1>
-                                <h6 class="card-title">
-                                    <strong><a href="#">{{$item->name}}</a></strong>
-                                </h6>
-                                <p>( 10 jobs )</p>
+                <a href="">
+                    <div class="col-xl col-lg-6 col-md-6 col-12">
+                        <div class="item-category">
+                            <!-- Card -->
+                            <div class="card">
+                                <div class="text-white text-center card-content">
+                                    <h1><i class="{{$item->icon}}"></i></h1>
+                                    <h6 class="card-title">
+                                        <strong><a href="#">{{$item->name}}</a></strong>
+                                    </h6>
+                                    <p>( 10 jobs )</p>
+                                </div>
                             </div>
+                            <!-- Card -->
                         </div>
-                        <!-- Card -->
                     </div>
-                </div>
+                </a>
                 @endforeach
 
             </div>

@@ -186,7 +186,7 @@ Jobs
                                 <!-- Card content -->
                                 <div class="card-body">
                                     <!-- Category & Title -->
-                                    <h5 class="card-title"><strong><a href="">{{$item->name}}</a></strong></h5>
+                                    <h5 class="card-title"><strong><a href="{{route('jobDetails', ['id'=>$item->id])}}">{{$item->name}}</a></strong></h5>
                                     <span class="badge badge-pill pink"><a href="#">{{$item->type()}}</a></span>
                                     <!-- /Category & Title -->
 
