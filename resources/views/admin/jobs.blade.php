@@ -149,6 +149,16 @@
                     </div>
 
 
+                    <!-- MAP -->
+                    <div class="row form-item">
+                        <div class="col-12 my-2">
+                            <div id="map" class="map-container" style="height: 360px">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2474156061717!2d69.24356531518035!3d41.32523300780929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b76b266e1e9%3A0xa6f5e1f04d9e6e1c!2sTuron+Telecom!5e0!3m2!1sen!2s!4v1555309567930!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /MAP -->
+
 
 
 

@@ -105,6 +105,9 @@ footer.page-footer {
 .poster-full {
   height: 100vh;
 }
+.poster-lg {
+  min-height: 70vh;
+}
 .poster-md {
   min-height: 60vh;
 }
@@ -881,7 +884,9 @@ footer img {
   border-radius: 10rem;
   max-height: 128px;
   max-width: 128px;
-
+}
+.dashboard #map {
+  height: 360px;
 }
 /* /Dashboard */
 
@@ -896,6 +901,47 @@ footer img {
 
 
 
+
+/* Contact */
+.poster-contact {
+  background-image: url("../img/contact-bg.jpg");
+}
+.contact-card-wrapper {
+  margin: 32px 0;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-card-left .contact-header {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  color: #4285f4;
+}
+.contact-card-left .btn-contact-wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.contact-card-right .contact-header {
+  margin-bottom: 48px;
+}
+.contact-card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  background: #34495e;
+  border-radius: 1rem;
+}
+/* /Contact */
 
 
 
