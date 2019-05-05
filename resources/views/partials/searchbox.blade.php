@@ -9,7 +9,7 @@
                 <option value="3">JavaScript</option>
                 <option value="4">PHP</option>
                 <option value="5">iOS</option>
-                <option value="6">Androi</option>
+                <option value="6">Android</option>
             </select>
             <label>Keywords?</label>
         </div>
