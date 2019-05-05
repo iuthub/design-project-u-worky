@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Candidate Details - u-WORKY</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/icomoon.css" >
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/all.css">
+  </head>
+
+  <body>
+    <header>
+     
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-xl navbar-dark scrolling-navbar fixed-top">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="u-WORKY" />
+        </a>
+  
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto d-flex">
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+  
+            <!-- Dropdown -->
+            <li class="nav-item dropdown my-auto">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Jobs</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item text-center" href="#">Job Categories</a>
+                <a class="dropdown-item text-center" href="jobs-listing.html">Search for job</a>
+                <a class="dropdown-item text-center" href="#">Find on Map</a>
+              </div>
+            </li>
+            <!-- /Dropdown -->
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="candidate-listing.html">Candidates</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Employers</a>
+            </li>
+  
+            <li class="nav-item my-auto">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+
+            <li>
+              <form class="form-inline">
+                <div class="md-form container-fluid my-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block btn-rounded"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- /Links -->
+        </div>
+        <!-- /Collapsible content -->
+      </nav>
+      <!-- /Navbar -->
+
+      <!-- Poster -->
+      <div class="poster poster-lg poster-candidate-details">
+          <div class="container">
+            <div class="info-top">
+
+              <div class="candidate-logo">
+                <img src="img/testimonial2.jpg" class="rounded-circle img-fluid">
+              </div>
+
+              <div class="info-inner">
+                <div class="title-headline">
+                  <h2 class="candidate-name">
+                    Dildora Ganieva
+                  </h2>
+                  
+                  <h4 class="candidate-headline">
+                    PHP Developer
+                  </h4>
+                </div>
+
+                <div class="candidate-details">
+                  <div class="candidate-info">
+                    <ul>
+                      <li class="candidate-email">
+                        <h6><i class="fas fa-envelope pr-3"></i>d.ganieva@student.inha.uz</h6>
+                      </li>
+                      <li class="candidate-phone">
+                        <h6><i class="fas fa-phone pr-3"></i>+ 998 (93) 777 77 77</h6>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-save-resume-wrapper">
+                    <button type="button" class="btn btn-primary btn-rounded"><i class="fas fa-heart pr-3" aria-hidden="true"></i>Save Resume</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="candidate-detail-menu">
+              <div class="detail-menu text-center">
+                <ul class="menu">
+                  <li><a href="#aboutme">About Me</a></li>
+                  <li><a href="#experience">Work Experience</a></li>
+                  <li><a href="#education">Education</a></li>
+                  <li><a href="#awards">Honors & Awards</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Poster -->
+    </header>
+
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <!--Main listing-->
+          <div class="col-lg-8 col-12 px-lg-4">
+            <div class="main-info">
+
+              <div id="aboutme">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          ABOUT ME
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolorem sapiente neque itaque reprehenderit perferendis laboriosam possimus amet deleniti quia soluta nostrum dignissimos dicta, eos, magnam tempore doloremque error?
+                </p>
+              </div>
+
+              <div id="experience">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          WORK EXPERIENCE
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <blockquote class="blockquote bq-primary">
+                    <div class="row blockquote-title-wrapper"> 
+                      <h5 class="blockquote-title">Senior developer</h5>
+                    </div>
+                    <p class="blockquote-time-duration">July, 2013 - Present (4 years)</p>
+                    <p class="blockquote-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </blockquote>
+                
+              </div>
+
+              <div id="education">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          EDUCATION
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <blockquote class="blockquote bq-primary">
+                    <div class="row blockquote-title-wrapper"> 
+                        <h5 class="blockquote-title">Senior developer</h5>
+                    </div>
+                    <p class="blockquote-time-duration">July, 2013 - Present (4 years)</p>
+                    <p class="blockquote-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </blockquote>
+                
+              </div>
+
+              <div id="awards">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          HONORS &amp; AWARDS
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <blockquote class="blockquote bq-primary">
+                    <div class="row blockquote-title-wrapper"> 
+                        <h5 class="blockquote-title">Senior developer</h5>
+                    </div>
+                    <p class="blockquote-time-duration">July, 2013 - Present (4 years)</p>
+                    <p class="blockquote-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </blockquote>
+              
+              </div>
+
+              <div id="skills">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          SKILLS
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <p class="candidate-skill">Java Script</p>
+                  <div class="md-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                  </div>
+
+                <p class="candidate-skill">CSS3</p>
+                  <div class="md-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+                  </div>
+
+                <p class="candidate-skill">HTML5</p>
+                  <div class="md-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                  </div>
+
+                <p class="candidate-skill">Bootstrap</p>
+                  <div class="md-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 45%"></div>
+                  </div>
+
+                <p class="candidate-skill">PHP</p>
+                  <div class="md-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 53%"></div>
+                  </div>
+              </div>
+
+              <div id="portfolio">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="section-title section-title-blue">
+                      <div>
+                        <h2>
+                          PORTFOLIO
+                        </h2>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                
+                    <div id="mdb-lightbox-ui"></div>
+                
+                    <div class="mdb-lightbox">
+                
+                      <figure class="col-md-4">
+                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(94).jpg" data-size="1600x1067">
+                          <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(94).jpg" class="img-fluid">
+                        </a>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nobis sit veritatis
+                          cumque! Placeat voluptate aut pariatur! Nihil molestiae quos explicabo dignissimos quam cupiditate
+                          sequi corporis eaque corrupti. Vel, est.</figcaption>
+                      </figure>
+                      <figure class="col-md-4">
+                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(96).jpg" data-size="1600x1067">
+                          <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(96).jpg" class="img-fluid" />
+                        </a>
+                        <figcaption>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                          mollit anim id est laborum.</figcaption>
+                      </figure>
+                      <figure class="col-md-4">
+                        <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(95).jpg" data-size="1600x1067">
+                          <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(95).jpg" class="img-fluid" />
+                        </a>
+                        <figcaption>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                          vitae dicta sunt explicabo.</figcaption>
+                      </figure>
+                
+                    </div>
+                
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <hr class="my-5">
+
+            <!-- Comments -->
+            <div>
+              <div>
+                
+                <!-- Comment -->
+                <div class="row comment">
+                  <div class="col-sm-2 col-12 comment-avatar-wrapper">
+                    <img src="img/testimonial2.jpg" class="comment-avatar img-fluid">
+                  </div>
+                  <div class="col-sm-10 col-12">
+                    <a>
+                      <h4 class="comment-username">Dildora Ganieva</h4>
+                    </a>
+                    <div class="mt-2">
+                      <ul class="list-unstyled">
+                        <li><i class="far fa-clock mr-2"></i> 05/10/2019</li>
+                      </ul>
+                    </div>
+                    <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                  </div>
+                </div>
+                <!-- Comment -->
+      
+                
+                <!-- Leave comment -->
+                <div>
+                  <form action="">
+
+                    <div class="row">
+                      <div class="col-sm-2 col-12 comment-avatar-wrapper">
+                        <img src="img/testimonial2.jpg" alt="" class="comment-avatar img-fluid">
+                      </div>
+
+                      <div class="col-sm-10 col-12">
+                        <div class="md-form">
+                          <textarea type="text" id="form-text" class="md-textarea form-control" rows="3"></textarea>
+                          <label for="form-text">Your message</label>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="row">
+                      <div class="col-md-12 btn-comment">
+                        <button class="btn btn-primary btn-rounded">Comment</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+                <!-- /Leave comment -->
+
+              </div>
+            </div>
+            <!-- Comments-->
+        
+          
+          </div>
+          <!--Main listing-->
+
+          <!--Sidebar-->
+          <div class="col-lg-4 col-12 mb-3 order-xl-last order-lg-last order-md-first order-first">
+
+            <div class="sidebar-details">
+              <hr class="">
+              <p>
+                <i class="fas fa-user-graduate pr-3 purple-text"></i><strong>Course :</strong><br><span>Sophomore</span><br>
+                <i class="fas fa-award pr-3 pink-text"></i><strong>GPA :</strong><br><span>4.5</span><br>
+                <i class="fas fa-calendar pr-3 green-text"></i><strong>Experience :</strong><br><span>3 years</span><br>
+                <i class="fas fa-clock pr-3 blue-text"></i><strong>Age :</strong><br><span>20 years</span><br>
+              </p>
+              <hr>
+            </div>
+
+              
+
+          </div>
+          <!--Sidebar-->
+
+        </div>
+      </div>
+    </main>
+
+
+
+    
+
+      
+    <!--Footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <!-- About -->
+          <div class="col-lg-4 col-md-12">
+            <div class="footer-col">
+              <h5 class="title">ABOUT u-WORKY</h5>
+              <div>
+                <img src="img/logo.png" alt="u-WORKY" />
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quibusdam assumenda sequi ducimus temporibus dolore, libero inventore dolorum error illo.
+              </p>
+              <p>
+                <i class="fab fa-github pr-3 mb-2 blue-text"></i>
+                <a href="https://github.com/iuthub/design-project-u-worky" target="_blank" rel="noopener noreferrer">LINK TO GITHUB</a>
+              </p>
+            </div>
+          </div>  
+          <!--/About -->
+
+          <!-- Done by -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>Project by</h5>
+              <p>Soliev Komroniddin</p>
+              <p>Ganieva Dildora</p>
+              <p>Lim Olga</p>
+              <p>Vakhobov Azamat</p>
+              <p>Islamov Davronbek</p>
+              <p>Tuyeva Mekhribon</p>
+            </div>
+          </div>
+          <!-- /Done by -->
+
+          <!-- ID -->
+          <div class="col-lg-3 col-md-12">
+            <div class="footer-col">
+              <h5>ID</h5>
+              <p>U1710036</p>
+              <p>U1710272</p>
+              <p>U1710297</p>
+              <p>U1710266</p>
+              <p>U1710261 </p>
+              <p>U1710029</p>
+            </div>
+          </div>
+          <!-- /ID -->
+        </div>
+      </div>
+
+      <!--Copyright-->
+      <div class="copyright">
+        <div class="container-fluid">
+          <p>
+              © 2019 Copyright: <a href="index.html" target="_blank"> u-WORKY </a>
+          </p>
+        </div>
+      </div>
+      <!--/Copyright-->
+
+    </footer>
+    <!--/Footer-->
+
+
+
+
+
+
+    <!--  SCRIPTS  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script>
+
+      $(function () {
+        $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+
+    </script>
+  </body>
+</html>
