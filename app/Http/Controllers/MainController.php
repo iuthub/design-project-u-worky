@@ -32,7 +32,6 @@ class MainController extends Controller {
 
     public function postJobs(Request $request){
         $data = $request->input();
-        $jobs = Job::where
         return view('dashboard.jobs');
     }
 }
