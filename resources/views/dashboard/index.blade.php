@@ -158,7 +158,7 @@ Main
                                                     <!-- Card image -->
                                                     <div class="col-4 card-image-wrapper">
                                                         <div class="card-image">
-                                                            <img src="{{asset('frontend/img/employer-logo-netco.png')}}"
+                                                            <img src="{{asset('frontend/img/'.$item->photo())}}"
                                                                 class="img-fluid" alt="">
                                                         </div>
                                                     </div>
