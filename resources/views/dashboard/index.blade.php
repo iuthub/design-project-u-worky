@@ -1,15 +1,18 @@
 @extends('layouts.master')
 
-<div class="body-index">
-    @section('navbar')
-    @include('partials.navbar', ['type' => 1])
-    @endsection
+@section('title')
+    Main
+@endsection
 
-    @section('poster')
-    @include('dashboard.poster')
-    @endsection
+@section('navbar')
+@include('partials.navbar', ['type' => 1])
+@endsection
 
-    @section('content')
+@section('poster')
+@include('dashboard.poster')
+@endsection
+
+@section('content')
     <section class="categories-wrapper">
         <div class="container">
             <div class="row">
@@ -824,9 +827,8 @@
                     </div>
                 </div>
     </section>
-    @endsection
+@endsection
 
-    @section('footer')
-    @include('partials.footer')
-    @endsection
-</div>
+@section('footer')
+@include('partials.footer')
+@endsection

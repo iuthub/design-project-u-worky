@@ -12,9 +12,9 @@
                 <i class="fas fa-user pr-2"></i>Profile
             </a>
             <div class="dropdown-menu dropdown-menu-center text-center" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">Home</a>
-                <a class="dropdown-item" href="#">Dashboard</a>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="{{route('home')}}">Home</a>
+                <a class="dropdown-item" href="{{route('admin.main')}}">Dashboard</a>
+                <a class="dropdown-item" href="{{route('logout')}}">Log Out</a>
             </div>
         </li>
 

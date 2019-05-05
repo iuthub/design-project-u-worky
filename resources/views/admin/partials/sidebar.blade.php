@@ -18,11 +18,11 @@
         <!-- Side navigation links -->
         <li>
             <ul class="dashboard-menu">
-                <li><a href="dashboard.html" class="collapsible-header waves-effect"><i
+                <li><a href="{{route('admin.main')}}" class="collapsible-header waves-effect"><i
                             class=" ion-ios-contact pr-3"></i>
                         <span>DASHBOARD</span></a>
                 </li>
-                <li><a href="dashboard-add-new-job.html" class="collapsible-header waves-effect"><i
+                <li><a href="{{route('admin.addnewjob')}}" class="collapsible-header waves-effect"><i
                             class=" ion-ios-compose pr-3"></i>
                         <span>ADD NEW JOB</span></a>
                 </li>

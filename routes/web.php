@@ -23,6 +23,11 @@ Route::group([
             'as' => 'admin.addnewjob'
         ]);
 
+        Route::post('jobs', [
+            'uses' => 'AdminController@postAddJob',
+            'as' => 'admin.addnewjob'
+        ]);
+
         Route::get('', [
             'uses' => 'AdminController@getIndex',
             'as' => 'admin.main'

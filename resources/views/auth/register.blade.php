@@ -12,7 +12,7 @@
                 <div class="card card-signup">
 
                     <h4 class="card-header">
-                        <strong>Sign in</strong>
+                        <strong>Sign up</strong>
                     </h4>
 
                     <!--Card content-->

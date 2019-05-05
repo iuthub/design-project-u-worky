@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-xl navbar-dark @if($type) scrolling-navbar @else top-nav-collapse @endif fixed-top">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="{{route('home')}}">
         <img src="{{asset('frontend/img/logo.png')}}" alt="u-WORKY" />
     </a>
 

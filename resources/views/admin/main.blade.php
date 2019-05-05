@@ -10,7 +10,6 @@
 
     @endsection
 
-
     @section('footer')
     @include('admin.partials.footer')
     @endsection

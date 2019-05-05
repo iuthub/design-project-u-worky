@@ -14,4 +14,8 @@ class AdminController extends Controller
     public function getIndex() {
         return view('admin.main');
     }
+
+    public function postAddJob(Request $request){
+        return redirect('/');
+    }
 }
