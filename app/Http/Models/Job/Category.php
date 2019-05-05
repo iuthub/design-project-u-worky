@@ -64,17 +64,4 @@ class Category extends CustomModel
 
         return $this;
     }
-
-    public function setCache($type)
-    {
-        switch ($type) {
-            case config('cache_items.index_cats'):
-                $data = $this::take(config('items.index_cat_count'))->get();
-                break;
-        }
-
-        Cache::add($type, $data, config('items.date')['day']);
-
-        return $data;
-    }
 }
